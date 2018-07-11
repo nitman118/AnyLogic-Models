@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*************************************************
+	         AnyLogic Project File 
+*************************************************	         
+-->
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.2.3.201711301819" AlpVersion="8.0.4">
+<Model>
+	<Id>1520087575303</Id>
+	<Name><![CDATA[NONLINEA_al]]></Name>
+	<Description><![CDATA[This model has been converted automatically via AnyLogic import feature from Vensim® model "NONLINEA_al.mdl"]]></Description>
+	<EngineVersion>6</EngineVersion>
+	<JavaPackageName><![CDATA[nonlinea_al]]></JavaPackageName>
+	<ModelTimeUnit><![CDATA[Year]]></ModelTimeUnit>
+	<ActiveObjectClasses>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1520087575308</Id>
+			<Name><![CDATA[Main]]></Name>
+			<Description><![CDATA[Main model class. Contains all system-dynamic variables and dependences]]></Description>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1520087575307</Id>
+				<Name><![CDATA[1520087575307]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>97</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1520150400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[0.125]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[YEAR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1520087575305</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<ConnectionsId>1520087575304</ConnectionsId>
+			<Variables>
+				<Variable Class="AuxVariable">
+					<Id>1520087575367</Id>
+					<Name><![CDATA[InitialPopulation]]></Name>
+					<Description><![CDATA[The initial population.]]></Description>
+					<Unit>People</Unit> 
+					<X>130</X><Y>490</Y>
+					<Label><X>-40</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[2]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575369</Id>
+					<Name><![CDATA[CarryingCapacity]]></Name>
+					<Description><![CDATA[The carrying capacity defines the equilibrium or maximum sustainable 
+population.]]></Description>
+					<Unit>People</Unit> 
+					<X>310</X><Y>280</Y>
+					<Label><X>-40</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[1000]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575371</Id>
+					<Name><![CDATA[FractionalBirthRate]]></Name>
+					<Description><![CDATA[The fractional birth rate is a declining function of the population 
+relative to the carrying capacity.  A logistic function is used.]]></Description>
+					<Unit>1 / Year</Unit> 
+					<X>160</X><Y>190</Y>
+					<Label><X>-40</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1 - ( 1 / ( 1 + exp( -7 * ( PopulationRelativeToCarryingCapacity - 1 ) ) ) )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1520087575400</Id>
+							<Name><![CDATA[<FractionalBirthRate>]]></Name>
+							<X>270</X><Y>380</Y>
+							<Label><X>-49</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575372</Id>
+					<Name><![CDATA[FractionalDeathRate]]></Name>
+					<Description><![CDATA[The fractional death rate is an increasing function of the ratio of 
+population to carrying capacity.  A power function is assumed.]]></Description>
+					<Unit>1 / Year</Unit> 
+					<X>450</X><Y>190</Y>
+					<Label><X>-49</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.25 + 0.25 * pow( PopulationRelativeToCarryingCapacity, 4 )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1520087575401</Id>
+							<Name><![CDATA[<FractionalDeathRate>]]></Name>
+							<X>270</X><Y>440</Y>
+							<Label><X>-51</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575373</Id>
+					<Name><![CDATA[NetBirthRate]]></Name>
+					<Description><![CDATA[The net birth rate is births less deaths.]]></Description>
+					<Unit>People / Year</Unit> 
+					<X>550</X><Y>410</Y>
+					<Label><X>-40</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[BirthRate - DeathRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575374</Id>
+					<Name><![CDATA[NetFractionalBirthRate]]></Name>
+					<Description><![CDATA[The net fractional birth rate is fractional births less fractional deaths.]]></Description>
+					<Unit>1 / Year</Unit> 
+					<X>130</X><Y>410</Y>
+					<Label><X>-40</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[FractionalBirthRate - FractionalDeathRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1520087575376</Id>
+					<Name><![CDATA[PopulationRelativeToCarryingCapacity]]></Name>
+					<Description><![CDATA[The ratio of population to carrying capacity determines the fractional 
+birth and death rates]]></Description>
+					<Unit></Unit> 
+					<X>320</X><Y>200</Y>
+					<Label><X>-49</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Population / CarryingCapacity]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1520087575375</Id>
+					<Name><![CDATA[Population]]></Name>
+					<Description><![CDATA[The population is increased by births and decreased by deaths.]]></Description>
+					<Unit>People</Unit> 
+					<X>310</X><Y>60</Y>
+					<Label><X>-40</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>80</Width>
+					<Height>40</Height>
+						<Expression><![CDATA[BirthRate - DeathRate]]></Expression>
+						<InitialValue><![CDATA[InitialPopulation]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1520087575392</Id>
+					<Name><![CDATA[BirthRate]]></Name>
+					<Description><![CDATA[Births are proportional to the population.]]></Description>
+					<Unit>People / Year</Unit> 
+					<X>190</X><Y>60</Y>
+					<Label><X>-40</X><Y>48</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1520087575375" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[FractionalBirthRate * Population]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1520087575398</Id>
+							<Name><![CDATA[<BirthRate>]]></Name>
+							<X>420</X><Y>380</Y>
+							<Label><X>-40</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-50</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>120</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1520087575393</Id>
+					<Name><![CDATA[DeathRate]]></Name>
+					<Description><![CDATA[Deaths are proportional to the population.]]></Description>
+					<Unit>People / Year</Unit> 
+					<X>420</X><Y>60</Y>
+					<Label><X>-28</X><Y>42</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1520087575375" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[FractionalDeathRate * Population]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1520087575399</Id>
+							<Name><![CDATA[<DeathRate>]]></Name>
+							<X>420</X><Y>440</Y>
+							<Label><X>-40</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-110</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>60</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+			</Variables>
+			<Dependences>
+				<Link SourceId="1520087575375" TargetId="1520087575376" Polarity="+">
+					<Height>-6.601644612746384</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.7679109</PolarityPosition>
+					<Direction><X>10</X><Y>140</Y></Direction>
+					<Id>1520087575390</Id>
+					<Name><![CDATA[Population - PopulationRelativeToCarryingCapacity]]></Name>
+					<X>310</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575375" TargetId="1520087575393" Polarity="+">
+					<Height>20.0</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.7018813</PolarityPosition>
+					<Direction><X>110</X><Y>0</Y></Direction>
+					<Id>1520087575379</Id>
+					<Name><![CDATA[Population - DeathRate]]></Name>
+					<X>310</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575375" TargetId="1520087575392" Polarity="+">
+					<Height>74.18383204509325</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.68746185</PolarityPosition>
+					<Direction><X>-120</X><Y>0</Y></Direction>
+					<Id>1520087575378</Id>
+					<Name><![CDATA[Population - BirthRate]]></Name>
+					<X>310</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575369" TargetId="1520087575376" Polarity="-">
+					<Height>-8.643632241013151</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.54928684</PolarityPosition>
+					<Direction><X>10</X><Y>-80</Y></Direction>
+					<Id>1520087575391</Id>
+					<Name><![CDATA[CarryingCapacity - PopulationRelativeToCarryingCapacity]]></Name>
+					<X>310</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575376" TargetId="1520087575371" Polarity="-">
+					<Height>49.1178388777444</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.77424705</PolarityPosition>
+					<Direction><X>-160</X><Y>-10</Y></Direction>
+					<Id>1520087575381</Id>
+					<Name><![CDATA[PopulationRelativeToCarryingCapacity - FractionalBirthRate]]></Name>
+					<X>320</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575371" TargetId="1520087575392" Polarity="+">
+					<Height>20.0</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.522947</PolarityPosition>
+					<Direction><X>30</X><Y>-130</Y></Direction>
+					<Id>1520087575377</Id>
+					<Name><![CDATA[FractionalBirthRate - BirthRate]]></Name>
+					<X>160</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575376" TargetId="1520087575372" Polarity="+">
+					<Height>-52.490576191712044</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.7765664</PolarityPosition>
+					<Direction><X>130</X><Y>-10</Y></Direction>
+					<Id>1520087575382</Id>
+					<Name><![CDATA[PopulationRelativeToCarryingCapacity - FractionalDeathRate]]></Name>
+					<X>320</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575372" TargetId="1520087575393" Polarity="+">
+					<Height>20.0</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.6512796</PolarityPosition>
+					<Direction><X>-30</X><Y>-130</Y></Direction>
+					<Id>1520087575380</Id>
+					<Name><![CDATA[FractionalDeathRate - DeathRate]]></Name>
+					<X>450</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575400" TargetId="1520087575374" Polarity="null">
+					<Height>-3.497465119541971</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-140</X><Y>30</Y></Direction>
+					<Id>1520087575385</Id>
+					<Name><![CDATA[<FractionalBirthRate> - NetFractionalBirthRate]]></Name>
+					<X>270</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575401" TargetId="1520087575374" Polarity="null">
+					<Height>1.3976917356269496</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-140</X><Y>-30</Y></Direction>
+					<Id>1520087575386</Id>
+					<Name><![CDATA[<FractionalDeathRate> - NetFractionalBirthRate]]></Name>
+					<X>270</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575398" TargetId="1520087575373" Polarity="null">
+					<Height>3.272839809637162</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>30</Y></Direction>
+					<Id>1520087575384</Id>
+					<Name><![CDATA[<BirthRate> - NetBirthRate]]></Name>
+					<X>420</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575399" TargetId="1520087575373" Polarity="null">
+					<Height>1.540498101119283</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>-30</Y></Direction>
+					<Id>1520087575383</Id>
+					<Name><![CDATA[<DeathRate> - NetBirthRate]]></Name>
+					<X>420</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1520087575367" TargetId="1520087575375" Polarity="null">
+					<Height>-1.3953016818450124</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>180</X><Y>-430</Y></Direction>
+					<Id>1520087575388</Id>
+					<Name><![CDATA[InitialPopulation - Population]]></Name>
+					<X>130</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+			</Dependences>
+			<CausalLoops>
+				<CausalLoop Clockwise="false">
+					<Type><![CDATA[B]]></Type>
+					<Id>1520087575394</Id>
+					<Name><![CDATA[loop]]></Name>
+					<X>360</X><Y>99</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="false">
+					<Type><![CDATA[B]]></Type>
+					<Id>1520087575395</Id>
+					<Name><![CDATA[loop1]]></Name>
+					<X>384</X><Y>168</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[B]]></Type>
+					<Id>1520087575396</Id>
+					<Name><![CDATA[loop2]]></Name>
+					<X>253</X><Y>167</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[R]]></Type>
+					<Id>1520087575397</Id>
+					<Name><![CDATA[loop3]]></Name>
+					<X>262</X><Y>98</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+			</CausalLoops>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1520087575304</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+
+		</ActiveObjectClass>
+	</ActiveObjectClasses>	
+	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
+	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
+	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+	<FixedTimeStep>0.01</FixedTimeStep>
+	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+	<TimeAccuracy>1.0E-5</TimeAccuracy>
+	<Frame>
+		<Width>700</Width>
+		<Height>600</Height>
+	</Frame>
+	<Database>
+		<Logging>false</Logging>
+		<AutoExport>false</AutoExport>
+		<ImportSettings>
+		</ImportSettings>
+		<ExportSettings>
+			<ExportExcelFilePath><![CDATA[]]></ExportExcelFilePath>
+		</ExportSettings>
+	</Database>
+	
+	<RunConfiguration ActiveObjectClassId="1520087575308">
+		<Id>1520087575402</Id>
+		<Name><![CDATA[RunConfiguration]]></Name>
+		<ModelTimeProperties>
+			<StopOption><![CDATA[Stop at specified time]]></StopOption>
+			<InitialDate><![CDATA[1520035200000]]></InitialDate>	
+			<InitialTime><![CDATA[0.0]]></InitialTime>	
+			<FinalDate><![CDATA[1522713600000]]></FinalDate>	
+			<FinalTime><![CDATA[12.0]]></FinalTime>	
+		</ModelTimeProperties>
+		<AnimationProperties>
+			<StopNever>false</StopNever>
+			<ExecutionMode>virtualTime</ExecutionMode>
+			<RealTimeScale>1.0</RealTimeScale>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<Maximized>false</Maximized>
+		</AnimationProperties>
+		<Inputs>		
+		</Inputs>
+		<Outputs>
+		</Outputs>
+	</RunConfiguration>
+	<Experiments>	
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1520087575308">
+			<Id>1520087575364</Id>
+			<Name><![CDATA[Simulation]]></Name>
+			<Description><![CDATA[Simulation experiment class. Used to run Main class of the model]]></Description>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+			<SnapshotFile></SnapshotFile>
+
+			<Shapes>
+				<Text>
+					<Id>1520087575365</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>40</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12490271</Color>
+					<Text><![CDATA[NONLINEA_al]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+			<Controls>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1520087575366</Id>
+					<Name><![CDATA[button]]></Name>
+					<X>40</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="100" Height="30" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[if ( getState() == IDLE )
+	run();
+getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[Run]]></LabelText>
+						<LabelCode><![CDATA[getState() == IDLE ?
+	"Run" :
+	"Top level agent"]]></LabelCode>
+					</ExtendedProperties>
+				</Control>
+			</Controls>
+
+			<Parameters>			
+			</Parameters>			
+			<PresentationProperties 
+				EnableAdaptiveFrameManagement="true" 
+				EnableAntiAliasing="true"
+				EnableEnhancedModelElementsAnimation="true"
+				ToolbarCustomizableAtRuntime="true">
+				<Maximized>false</Maximized>
+				<CloseConfirmation>false</CloseConfirmation>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<ExecutionMode><![CDATA[virtualTime]]></ExecutionMode>
+				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
+				<Title><![CDATA[NONLINEA_al : Simulation]]></Title>	
+				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
+				<RealTimeScale>1.0</RealTimeScale>
+				<UIProperty Name="Experiment Progress" Value="false"/>
+				<UIProperty Name="Simulation Progress" Value="true"/>
+				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Memory" Value="true"/>
+				<UIProperty Name="Statusbar Model Date" Value="true"/>
+				<UIProperty Name="Statusbar Model Step" Value="false"/>
+				<UIProperty Name="Statusbar Model Time" Value="true"/>
+				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
+				<UIProperty Name="Statusbar Status" Value="true"/>
+				<UIProperty Name="Toolbar Animation setup" Value="false"/>
+				<UIProperty Name="Toolbar Execution control" Value="true"/>
+				<UIProperty Name="Toolbar File" Value="false"/>
+				<UIProperty Name="Toolbar Model navigation" Value="true"/>
+				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
+				<UIProperty Name="Toolbar View" Value="false"/>
+			</PresentationProperties>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Stop at specified time]]></StopOption>
+				<InitialDate><![CDATA[1520035200000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1522713600000]]></FinalDate>	
+				<FinalTime><![CDATA[12.0]]></FinalTime>	
+			</ModelTimeProperties>
+		</SimulationExperiment>	
+	</Experiments>
+</Model>
+</AnyLogicWorkspace>

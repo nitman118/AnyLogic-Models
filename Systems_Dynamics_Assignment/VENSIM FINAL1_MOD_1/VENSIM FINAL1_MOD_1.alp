@@ -1,0 +1,3405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*************************************************
+	         AnyLogic Project File 
+*************************************************	         
+-->
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.2.3.201711301819" AlpVersion="8.0.4">
+<Model>
+	<Id>1522607070283</Id>
+	<Name><![CDATA[VENSIM FINAL1_MOD_1]]></Name>
+	<Description><![CDATA[This model has been converted automatically via AnyLogic import feature from Vensim® model "VENSIM FINAL.mdl"]]></Description>
+	<EngineVersion>6</EngineVersion>
+	<JavaPackageName><![CDATA[vensim_final]]></JavaPackageName>
+	<ModelTimeUnit><![CDATA[Week]]></ModelTimeUnit>
+	<ActiveObjectClasses>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1522607070289</Id>
+			<Name><![CDATA[Main]]></Name>
+			<Description><![CDATA[Main model class. Contains all system-dynamic variables and dependences]]></Description>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1522607070288</Id>
+				<Name><![CDATA[1522607070288]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>801</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1522656000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[0.125]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1522607070286</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<ConnectionsId>1522607070285</ConnectionsId>
+			<Variables>
+				<Variable Class="AuxVariable">
+					<Id>1522607070426</Id>
+					<Name><![CDATA[DesiredRequestCreationRate]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>360</X><Y>3870</Y>
+					<Label><X>-69</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[AdjustmentToLaborForce + AdjustmentForRequests]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070427</Id>
+					<Name><![CDATA[InformationDelay]]></Name>
+					<Unit>Week</Unit> 
+					<X>1470</X><Y>3750</Y>
+					<Label><X>-68</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[1]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070428</Id>
+					<Name><![CDATA[AdjustmentToLaborForce]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>1720</X><Y>3970</Y>
+					<Label><X>-60</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( FactoryLaborRequest - LaborForce ) / LaborAdjustmentTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070429</Id>
+					<Name><![CDATA[AdjustmentForRequests]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>840</X><Y>3830</Y>
+					<Label><X>-60</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( AuthorizedRequests ) / RequestAdjustmentTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070431</Id>
+					<Name><![CDATA[AverageDurationOfEmployment]]></Name>
+					<Unit>Week</Unit> 
+					<X>1680</X><Y>3370</Y>
+					<Label><X>-81</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[100]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070432</Id>
+					<Name><![CDATA[DesiredProductionStartRate]]></Name>
+					<Unit>Widgets / Week</Unit> 
+					<X>480</X><Y>1510</Y>
+					<Label><X>-69</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[DesiredProduction + AdjustmentForWIP]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070601</Id>
+							<Name><![CDATA[<DesiredProductionStartRate>]]></Name>
+							<X>2250</X><Y>3820</Y>
+							<Label><X>-84</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070433</Id>
+					<Name><![CDATA[FactoryLaborRequest]]></Name>
+					<Unit>worker</Unit> 
+					<X>2310</X><Y>3930</Y>
+					<Label><X>-59</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[DesiredProductionStartRate / NormalLaborProductivity]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070434</Id>
+					<Name><![CDATA[LaborAdjustmentTime]]></Name>
+					<Unit>Week</Unit> 
+					<X>1770</X><Y>4120</Y>
+					<Label><X>-73</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[8]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070436</Id>
+					<Name><![CDATA[NormalLaborProductivity]]></Name>
+					<Unit>Widgets / worker / Week</Unit> 
+					<X>2300</X><Y>4170</Y>
+					<Label><X>-59</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[20]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070596</Id>
+							<Name><![CDATA[<NormalLaborProductivity>]]></Name>
+							<X>220</X><Y>1570</Y>
+							<Label><X>-63</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070437</Id>
+					<Name><![CDATA[NormalProductionRate]]></Name>
+					<Unit>Widgets / Week</Unit> 
+					<X>360</X><Y>1390</Y>
+					<Label><X>-68</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[NormalLaborProductivity * LaborForce]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070439</Id>
+					<Name><![CDATA[RequestAdjustmentTime]]></Name>
+					<Unit>Week</Unit> 
+					<X>850</X><Y>4160</Y>
+					<Label><X>-71</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[4]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070443</Id>
+					<Name><![CDATA[RatioOfMaximumToDesiredShipments]]></Name>
+					<Description><![CDATA[The ratio of the maximum to desired shipment rate.  Ratios less than one 
+indicate shipments are constrained below the desired level.]]></Description>
+					<Unit></Unit> 
+					<X>20</X><Y>-30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[MaximumShipmentRate / DesiredShipmentRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070610</Id>
+							<Name><![CDATA[<RatioOfMaximumToDesiredShipments>]]></Name>
+							<X>1480</X><Y>1390</Y>
+							<Label><X>10</X><Y>0</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<Shadow>
+							<Id>1522607070611</Id>
+							<Name><![CDATA[<RatioOfMaximumToDesiredShipments>]]></Name>
+							<X>1160</X><Y>1470</Y>
+							<Label><X>10</X><Y>0</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070444</Id>
+					<Name><![CDATA[OrderFulfillmentRatio]]></Name>
+					<Description><![CDATA[The Fraction of customer orders filled is determined by the ratio of the 
+normal shipment rate to the desired rate.  The normal rate is the rate 
+current inventory permits under normal circumstances.  Low inventory 
+availability reduces shipments below customer orders.  Unfilled customer 
+orders are lost.]]></Description>
+					<Unit></Unit> 
+					<X>1330</X><Y>1420</Y>
+					<Label><X>-45</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[TableForOrderFulfillment( MaximumShipmentRate / DesiredShipmentRate )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070446</Id>
+					<Name><![CDATA[DesiredShipmentRate]]></Name>
+					<Description><![CDATA[The desired shipment rate equals the customer order rate.  In this model 
+there is no backlog of unfilled orders:  unfilled orders are lost as 
+customers seek alternate sources of supply.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>1460</X><Y>1370</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[CustomerOrderRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070447</Id>
+					<Name><![CDATA[InventoryCoverage]]></Name>
+					<Description><![CDATA[Inventory coverage is given by the ratio of inventory to shipments.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>1210</X><Y>1200</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Inventory / ShipmentRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070448</Id>
+					<Name><![CDATA[DesiredInventoryCoverage]]></Name>
+					<Description><![CDATA[Desired inventory coverage is the number of weeks of the demand forecast the plant 
+seeks to maintain
+        in inventory.  This inventory coverage is required to maintain delivery 
+reliability by
+         buffering the plant against unforeseen variations in demand or 
+production.  It consists of the normal order processing time plus an 
+additional term representing the coverage desired to maintain safety 
+stocks.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>1300</X><Y>1630</Y>
+					<Label><X>-46</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[MinimumOrderProcessingTime + SafetyStockCoverage]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070449</Id>
+					<Name><![CDATA[MaximumShipmentRate]]></Name>
+					<Description><![CDATA[The maximum rate of shipments the firm can achieve given their current 
+inventory level and the minimum order processing time.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>1140</X><Y>1450</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Inventory / MinimumOrderProcessingTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070450</Id>
+					<Name><![CDATA[MinimumOrderProcessingTime]]></Name>
+					<Description><![CDATA[The minimum time required to process and ship an order.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>1250</X><Y>1520</Y>
+					<Label><X>-64</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[2]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070451</Id>
+					<Name><![CDATA[SafetyStockCoverage]]></Name>
+					<Description><![CDATA[Safety stock coverage is the number of weeks of the expected order rate 
+the firm would like to maintain in inventory over and above the normal 
+order processing time.  The safety stock provides a buffer against the 
+possibility that unforeseen variations in demand will cause shipments to 
+fall below orders.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>1440</X><Y>1610</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[2]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070454</Id>
+					<Name><![CDATA[DesiredInventory]]></Name>
+					<Description><![CDATA[The desired inventory level sought by the plant.  Experience suggests that to 
+maintain customer
+        service by providing full and reliable deliveries, the plant must maintain a 
+certain
+         coverage of throughput (demand), estimated by the demand forecast.]]></Description>
+					<Unit>Widgets</Unit> 
+					<X>1160</X><Y>1600</Y>
+					<Label><X>-41</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[DesiredInventoryCoverage * ExpectedOrderRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070457</Id>
+					<Name><![CDATA[TimeToAverageOrderRate]]></Name>
+					<Description><![CDATA[The demand forecast adjusts to actual customer orders over this time 
+period.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>1230</X><Y>1830</Y>
+					<Label><X>-76</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[8]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070459</Id>
+					<Name><![CDATA[ManufacturingCycleTime]]></Name>
+					<Description><![CDATA[The average delay between the start and completion of production]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>850</X><Y>1410</Y>
+					<Label><X>-60</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[4]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070460</Id>
+					<Name><![CDATA[AdjustmentForWIP]]></Name>
+					<Description><![CDATA[The adjustment to the production start rate from the adequacy of WIP 
+inventory.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>720</X><Y>1480</Y>
+					<Label><X>-51</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( DesiredWIP - WorkInProcessInventory ) / WIPAdjustmentTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070461</Id>
+					<Name><![CDATA[WIPAdjustmentTime]]></Name>
+					<Description><![CDATA[The time required to adjust the WIP inventory to the desired level.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>700</X><Y>1580</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[2]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070463</Id>
+					<Name><![CDATA[DesiredWIP]]></Name>
+					<Description><![CDATA[The desired quantity of work in process inventory.  Proportional to the 
+manufacturing cycle time and
+         the desired rate of production.]]></Description>
+					<Unit>Widgets</Unit> 
+					<X>850</X><Y>1540</Y>
+					<Label><X>-54</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ManufacturingCycleTime * DesiredProduction]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070464</Id>
+					<Name><![CDATA[DesiredProduction]]></Name>
+					<Description><![CDATA[Desired Production is the demand forecast (Expected Order Rate) adjusted to bring 
+the inventory
+         position in line with the target inventory level.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>710</X><Y>1740</Y>
+					<Label><X>-49</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[max( 0, ExpectedOrderRate + ProductionAdjustmentFromInventory )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070465</Id>
+					<Name><![CDATA[ProductionAdjustmentFromInventory]]></Name>
+					<Description><![CDATA[The desired production rate is adjusted above or below the forecast based on the 
+inventory position
+        of the plant.  When desired inventory > inventory, desired production is 
+increased (and
+         vice-versa).  Inventory gaps are corrected over the inv. adj. 
+time.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>1040</X><Y>1530</Y>
+					<Label><X>-60</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( DesiredInventory - Inventory ) / InventoryAdjustmentTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070466</Id>
+					<Name><![CDATA[InventoryAdjustmentTime]]></Name>
+					<Description><![CDATA[The inventory adjustment time is the time period over which the plant seeks to bring 
+inventory in
+         balance with the desired level.  Initially set to 8 weeks.]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>970</X><Y>1450</Y>
+					<Label><X>-61</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[8]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070467</Id>
+					<Name><![CDATA[CustomerOrderRate]]></Name>
+					<Description><![CDATA[Customer order rate is exogenous.  A variety of test inputs allow users to try 
+different patterns,
+         including a step, pulse, sine wave, and random noise.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>520</X><Y>160</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[InitialCustomerOrderRate * Input]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070586</Id>
+							<Name><![CDATA[<CustomerOrderRate>]]></Name>
+							<X>1630</X><Y>1530</Y>
+							<Label><X>-53</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070468</Id>
+					<Name><![CDATA[InitialCustomerOrderRate]]></Name>
+					<Description><![CDATA[Initial value of customer orders, set to 10,000 widgets per week.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>400</X><Y>220</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[10000]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070593</Id>
+							<Name><![CDATA[<InitialCustomerOrderRate>]]></Name>
+							<X>1740</X><Y>1610</Y>
+							<Label><X>-58</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070469</Id>
+					<Name><![CDATA[Input]]></Name>
+					<Description><![CDATA[Input is a dimensionless variable which provides a variety of test input patterns, 
+including a step,
+         pulse, sine wave, and random noise.]]></Description>
+					<Unit></Unit> 
+					<X>470</X><Y>410</Y>
+					<Label><X>-23</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1 + step( StepHeight, StepTime ) + ( PulseQuantity / TIME_STEP ) * pulse( 
+PulseTime, TIME_STEP ) + ramp( RampSlope, RampStartTime, RampEndTime ) + 
+SineAmplitude * sin( 2 * 3.14159 * time() / SinePeriod ) + step( 1, 
+NoiseStartTime ) * PinkNoise]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070579</Id>
+							<Name><![CDATA[<Input>]]></Name>
+							<X>400</X><Y>150</Y>
+							<Label><X>-33</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<Shadow>
+							<Id>1522607070594</Id>
+							<Name><![CDATA[<Input>]]></Name>
+							<X>1740</X><Y>1690</Y>
+							<Label><X>-50</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070470</Id>
+					<Name><![CDATA[StepHeight]]></Name>
+					<Description><![CDATA[Height of step input to customer orders, as fraction of initial value.]]></Description>
+					<Unit></Unit> 
+					<X>480</X><Y>540</Y>
+					<Label><X>-49</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0.1]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070471</Id>
+					<Name><![CDATA[StepTime]]></Name>
+					<Description><![CDATA[Time for the step input.]]></Description>
+					<Unit>Week</Unit> 
+					<X>550</X><Y>510</Y>
+					<Label><X>-44</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[5]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070472</Id>
+					<Name><![CDATA[PulseQuantity]]></Name>
+					<Description><![CDATA[The quantity to be injected to customer orders, as a fraction of the base value of 
+Input. 
+        For example, to pulse in a quantity equal to 50% of the current value of 
+input, set to
+         .50.]]></Description>
+					<Unit>1 * Week</Unit> 
+					<X>580</X><Y>360</Y>
+					<Label><X>-60</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070473</Id>
+					<Name><![CDATA[PulseTime]]></Name>
+					<Description><![CDATA[Time at which the pulse in Input occurs.]]></Description>
+					<Unit>Week</Unit> 
+					<X>590</X><Y>400</Y>
+					<Label><X>-48</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[5]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070474</Id>
+					<Name><![CDATA[RampSlope]]></Name>
+					<Description><![CDATA[Slope of the ramp input, as a fraction of the base value (per week).]]></Description>
+					<Unit>1 / Week</Unit> 
+					<X>350</X><Y>450</Y>
+					<Label><X>-51</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070475</Id>
+					<Name><![CDATA[RampStartTime]]></Name>
+					<Description><![CDATA[Start time for the ramp input.]]></Description>
+					<Unit>Week</Unit> 
+					<X>350</X><Y>480</Y>
+					<Label><X>-70</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[5]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070476</Id>
+					<Name><![CDATA[RampEndTime]]></Name>
+					<Description><![CDATA[End time for the ramp input.]]></Description>
+					<Unit>Week</Unit> 
+					<X>390</X><Y>520</Y>
+					<Label><X>-66</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[1e+09]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070477</Id>
+					<Name><![CDATA[SineAmplitude]]></Name>
+					<Description><![CDATA[Amplitude of sine wave in customer orders (fraction of mean).]]></Description>
+					<Unit></Unit> 
+					<X>600</X><Y>440</Y>
+					<Label><X>-64</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070478</Id>
+					<Name><![CDATA[SinePeriod]]></Name>
+					<Description><![CDATA[Period of sine wave in customer demand.  Set initially to 50 weeks (1 
+year).]]></Description>
+					<Unit>Weeks</Unit> 
+					<X>590</X><Y>490</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[50]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070479</Id>
+					<Name><![CDATA[NoiseStartTime]]></Name>
+					<Description><![CDATA[Start time for the random input.]]></Description>
+					<Unit>Week</Unit> 
+					<X>490</X><Y>320</Y>
+					<Label><X>-69</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[5]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070482</Id>
+					<Name><![CDATA[NoiseCorrelationTime]]></Name>
+					<Description><![CDATA[The correlation time constant for Pink Noise.]]></Description>
+					<Unit>Week</Unit> 
+					<X>1080</X><Y>440</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[4]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070483</Id>
+					<Name><![CDATA[WhiteNoise]]></Name>
+					<Description><![CDATA[White noise input to the pink noise process.]]></Description>
+					<Unit></Unit> 
+					<X>920</X><Y>470</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[NoiseStandardDeviation * ( pow( ( 24 * NoiseCorrelationTime / TIME_STEP ), 0.5 ) * ( 
+WhiteNoise_random - 0.5 ) )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070484</Id>
+					<Name><![CDATA[NoiseStandardDeviation]]></Name>
+					<Description><![CDATA[The standard deviation of the pink noise process.]]></Description>
+					<Unit></Unit> 
+					<X>780</X><Y>500</Y>
+					<Label><X>-50</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070550</Id>
+					<Name><![CDATA[TIME_STEP]]></Name>
+					<Description><![CDATA[Time step in terms of Vensim® model]]></Description>
+					<X>20</X><Y>-110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0.125]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1522607070608</Id>
+							<Name><![CDATA[<TIME_STEP>]]></Name>
+							<X>420</X><Y>170</Y>
+							<Label><X>10</X><Y>0</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<Shadow>
+							<Id>1522607070609</Id>
+							<Name><![CDATA[<TIME_STEP>]]></Name>
+							<X>940</X><Y>510</Y>
+							<Label><X>10</X><Y>0</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1522607070568</Id>
+					<Name><![CDATA[WhiteNoise_random]]></Name>
+					<Description><![CDATA[This variable holds the value of random sample for variable WhiteNoise - Dynamic Variable during time step in terms of Vensim®]]></Description>
+					<X>940</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="true" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[uniform()]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070435</Id>
+					<Name><![CDATA[LaborForce]]></Name>
+					<Unit>worker</Unit> 
+					<X>1620</X><Y>3550</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<Expression><![CDATA[HiringRate - AttritionRate]]></Expression>
+						<InitialValue><![CDATA[500]]></InitialValue>
+						<Color/>
+						<Shadow>
+							<Id>1522607070595</Id>
+							<Name><![CDATA[<LaborForce>]]></Name>
+							<X>120</X><Y>1390</Y>
+							<Label><X>-61</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070438</Id>
+					<Name><![CDATA[AuthorizedRequests]]></Name>
+					<Unit>worker</Unit> 
+					<X>660</X><Y>3560</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>50</Height>
+						<Expression><![CDATA[RequestCreationRate - RequestApprovalRate]]></Expression>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070452</Id>
+					<Name><![CDATA[Inventory]]></Name>
+					<Description><![CDATA[The level of finished goods inventory in the plant.  Increased by production and 
+decreased by
+         shipments.  Initially set to the desired inventory level.]]></Description>
+					<Unit>Widgets</Unit> 
+					<X>1080</X><Y>1280</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>50</Height>
+						<Expression><![CDATA[ProductionRate - ShipmentRate]]></Expression>
+						<InitialValue><![CDATA[DesiredInventory]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070455</Id>
+					<Name><![CDATA[ExpectedOrderRate]]></Name>
+					<Description><![CDATA[The demand forecast is formed by adaptive expectations, using exponential smoothing, 
+a common
+         forecasting technique.  The initial forecast is equal to the 
+initial customer order rate.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>1160</X><Y>1720</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>50</Height>
+						<Expression><![CDATA[ChangeInExpOrders]]></Expression>
+						<InitialValue><![CDATA[CustomerOrderRate]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070462</Id>
+					<Name><![CDATA[WorkInProcessInventory]]></Name>
+					<Description><![CDATA[WIP inventory accumulates the difference between production starts and 
+completions.]]></Description>
+					<Unit>Widgets</Unit> 
+					<X>710</X><Y>1280</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>50</Height>
+						<Expression><![CDATA[ProductionStartRate - ProductionRate]]></Expression>
+						<InitialValue><![CDATA[DesiredWIP]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1522607070480</Id>
+					<Name><![CDATA[PinkNoise]]></Name>
+					<Description><![CDATA[Pink Noise is first-order autocorrelated noise.  Pink noise provides a realistic 
+noise input to
+        models in which the next random shock depends in part on the previous 
+shocks.  The user
+        can specify the correlation time.  The mean is 0 and the standard deviation 
+is specified
+         by the user.]]></Description>
+					<Unit></Unit> 
+					<X>880</X><Y>340</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<Expression><![CDATA[ChangeInPinkNoise]]></Expression>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color/>
+						<Shadow>
+							<Id>1522607070580</Id>
+							<Name><![CDATA[<PinkNoise>]]></Name>
+							<X>370</X><Y>350</Y>
+							<Label><X>-55</X><Y>16</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070581</Id>
+					<Name><![CDATA[ChangeInPinkNoise]]></Name>
+					<Description><![CDATA[Change in the pink noise value; Pink noise is a first order exponential smoothing 
+delay of the white
+         noise input.]]></Description>
+					<Unit>1 / Week</Unit> 
+					<X>1000</X><Y>340</Y>
+					<Label><X>-50</X><Y>60</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1522607070480" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( WhiteNoise - PinkNoise ) / NoiseCorrelationTime]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>30</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-120</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070582</Id>
+					<Name><![CDATA[ProductionRate]]></Name>
+					<Description><![CDATA[Production is a third order delay of the production start rate, with the delay time 
+determined by
+         the manufacturing cycle time.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>890</X><Y>1280</Y>
+					<Label><X>-55</X><Y>55</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1522607070462" TargetId="1522607070452" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[delay3( ProductionStartRate, ManufacturingCycleTime )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-180</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>190</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070583</Id>
+					<Name><![CDATA[ShipmentRate]]></Name>
+					<Description><![CDATA[The shipment rate is the desired shipment rate multiplied by the fraction 
+of orders filled (the order fulfillment ratio.   Shipments fall below 
+desired shipments when the feasible shipment rate falls below the desired 
+rate, indicating that some products are unavailable.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>1340</X><Y>1280</Y>
+					<Label><X>-45</X><Y>56</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1522607070452" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[DesiredShipmentRate * OrderFulfillmentRatio]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-260</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>260</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070584</Id>
+					<Name><![CDATA[ChangeInExpOrders]]></Name>
+					<Description><![CDATA[The demand forecast adjusts to the actual order rate over a time period determined 
+by the Time to
+        Average Order Rate.  The demand forecast is formed by first-order 
+exponential smoothing,
+         a widely used forecasting technique.]]></Description>
+					<Unit>(Widgets / Week) / Week</Unit> 
+					<X>1260</X><Y>1720</Y>
+					<Label><X>-46</X><Y>52</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1522607070455" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( CustomerOrderRate - ExpectedOrderRate ) / TimeToAverageOrderRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>30</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-100</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070585</Id>
+					<Name><![CDATA[ProductionStartRate]]></Name>
+					<Description><![CDATA[The production start rate is the desired production start rate, 
+constrained to be nonnegative.]]></Description>
+					<Unit>Widgets / Week</Unit> 
+					<X>570</X><Y>1280</Y>
+					<Label><X>-50</X><Y>60</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1522607070462" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[max( 0, NormalProductionRate )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-130</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>140</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070597</Id>
+					<Name><![CDATA[RequestCreationRate]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>500</X><Y>3550</Y>
+					<Label><X>-62</X><Y>64</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1522607070438" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[max( 0, DesiredRequestCreationRate )]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-90</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>160</X><Y>10</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070598</Id>
+					<Name><![CDATA[RequestApprovalRate]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>840</X><Y>3570</Y>
+					<Label><X>-68</X><Y>66</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1522607070438" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[HiringRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-180</X><Y>-10</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>120</X><Y>-8</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070599</Id>
+					<Name><![CDATA[HiringRate]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>1460</X><Y>3560</Y>
+					<Label><X>-54</X><Y>70</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1522607070435" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[( AuthorizedRequests / InformationDelay ) + AttritionRate]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-140</X><Y>-8</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>160</X><Y>-10</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1522607070600</Id>
+					<Name><![CDATA[AttritionRate]]></Name>
+					<Unit>worker / Week</Unit> 
+					<X>1750</X><Y>3540</Y>
+					<Label><X>-54</X><Y>38</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1522607070435" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[LaborForce / AverageDurationOfEmployment]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>-130</X><Y>10</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>60</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+			</Variables>
+			<Dependences>
+				<Link SourceId="1522607070468" TargetId="1522607070467" Polarity="null">
+					<Height>-26.858538473979948</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>-60</Y></Direction>
+					<Id>1522607070548</Id>
+					<Name><![CDATA[InitialCustomerOrderRate - CustomerOrderRate]]></Name>
+					<X>400</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070479" TargetId="1522607070469" Polarity="null">
+					<Height>-1.2517312874184654</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-20</X><Y>90</Y></Direction>
+					<Id>1522607070556</Id>
+					<Name><![CDATA[NoiseStartTime - Input]]></Name>
+					<X>490</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070472" TargetId="1522607070469" Polarity="null">
+					<Height>-1.27187111762737</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>50</Y></Direction>
+					<Id>1522607070561</Id>
+					<Name><![CDATA[PulseQuantity - Input]]></Name>
+					<X>580</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070473" TargetId="1522607070469" Polarity="null">
+					<Height>-0.33364468419586046</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>10</Y></Direction>
+					<Id>1522607070562</Id>
+					<Name><![CDATA[PulseTime - Input]]></Name>
+					<X>590</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070476" TargetId="1522607070469" Polarity="null">
+					<Height>1.1145761258048879</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>80</X><Y>-110</Y></Direction>
+					<Id>1522607070551</Id>
+					<Name><![CDATA[RampEndTime - Input]]></Name>
+					<X>390</X><Y>520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070474" TargetId="1522607070469" Polarity="null">
+					<Height>5.067701841283508</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>-40</Y></Direction>
+					<Id>1522607070558</Id>
+					<Name><![CDATA[RampSlope - Input]]></Name>
+					<X>350</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070475" TargetId="1522607070469" Polarity="null">
+					<Height>1.2614534766787528</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>-70</Y></Direction>
+					<Id>1522607070553</Id>
+					<Name><![CDATA[RampStartTime - Input]]></Name>
+					<X>350</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070477" TargetId="1522607070469" Polarity="null">
+					<Height>0.4094418684653647</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>-30</Y></Direction>
+					<Id>1522607070560</Id>
+					<Name><![CDATA[SineAmplitude - Input]]></Name>
+					<X>600</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070478" TargetId="1522607070469" Polarity="null">
+					<Height>-2.510995663389849</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>-80</Y></Direction>
+					<Id>1522607070552</Id>
+					<Name><![CDATA[SinePeriod - Input]]></Name>
+					<X>590</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070470" TargetId="1522607070469" Polarity="null">
+					<Height>0.3857389895920278</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>-130</Y></Direction>
+					<Id>1522607070557</Id>
+					<Name><![CDATA[StepHeight - Input]]></Name>
+					<X>480</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070471" TargetId="1522607070469" Polarity="null">
+					<Height>1.4204655834673758</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-100</Y></Direction>
+					<Id>1522607070559</Id>
+					<Name><![CDATA[StepTime - Input]]></Name>
+					<X>550</X><Y>510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070579" TargetId="1522607070467" Polarity="null">
+					<Height>25.913048394988664</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>10</Y></Direction>
+					<Id>1522607070549</Id>
+					<Name><![CDATA[<Input> - CustomerOrderRate]]></Name>
+					<X>400</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070480" TargetId="1522607070581" Polarity="null">
+					<Height>-66.20768543766145</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>0</Y></Direction>
+					<Id>1522607070564</Id>
+					<Name><![CDATA[PinkNoise - ChangeInPinkNoise]]></Name>
+					<X>880</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070483" TargetId="1522607070581" Polarity="null">
+					<Height>-38.58703518813732</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>80</X><Y>-130</Y></Direction>
+					<Id>1522607070566</Id>
+					<Name><![CDATA[WhiteNoise - ChangeInPinkNoise]]></Name>
+					<X>920</X><Y>470</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070482" TargetId="1522607070581" Polarity="null">
+					<Height>-22.72366830185814</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-100</Y></Direction>
+					<Id>1522607070565</Id>
+					<Name><![CDATA[NoiseCorrelationTime - ChangeInPinkNoise]]></Name>
+					<X>1080</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070482" TargetId="1522607070483" Polarity="null">
+					<Height>32.86712058401416</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-160</X><Y>30</Y></Direction>
+					<Id>1522607070571</Id>
+					<Name><![CDATA[NoiseCorrelationTime - WhiteNoise]]></Name>
+					<X>1080</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070484" TargetId="1522607070483" Polarity="null">
+					<Height>-7.10032226425318</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-30</Y></Direction>
+					<Id>1522607070569</Id>
+					<Name><![CDATA[NoiseStandardDeviation - WhiteNoise]]></Name>
+					<X>780</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070580" TargetId="1522607070469" Polarity="null">
+					<Height>4.76347902265735</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>60</Y></Direction>
+					<Id>1522607070554</Id>
+					<Name><![CDATA[<PinkNoise> - Input]]></Name>
+					<X>370</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070466" TargetId="1522607070465" Polarity="-">
+					<Height>-39.98594352982064</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>70</X><Y>80</Y></Direction>
+					<Id>1522607070545</Id>
+					<Name><![CDATA[InventoryAdjustmentTime - ProductionAdjustmentFromInventory]]></Name>
+					<X>970</X><Y>1450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070452" TargetId="1522607070465" Polarity="-">
+					<Height>16.69324876979215</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-40</X><Y>250</Y></Direction>
+					<Id>1522607070546</Id>
+					<Name><![CDATA[Inventory - ProductionAdjustmentFromInventory]]></Name>
+					<X>1080</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070454" TargetId="1522607070465" Polarity="+">
+					<Height>-27.960031548660368</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>-70</Y></Direction>
+					<Id>1522607070547</Id>
+					<Name><![CDATA[DesiredInventory - ProductionAdjustmentFromInventory]]></Name>
+					<X>1160</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070448" TargetId="1522607070454" Polarity="+">
+					<Height>12.467750663660752</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.70245504</PolarityPosition>
+					<Direction><X>-140</X><Y>-30</Y></Direction>
+					<Id>1522607070526</Id>
+					<Name><![CDATA[DesiredInventoryCoverage - DesiredInventory]]></Name>
+					<X>1300</X><Y>1630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070455" TargetId="1522607070454" Polarity="+">
+					<Height>-1.9597598590163443</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>0</X><Y>-120</Y></Direction>
+					<Id>1522607070527</Id>
+					<Name><![CDATA[ExpectedOrderRate - DesiredInventory]]></Name>
+					<X>1160</X><Y>1720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070465" TargetId="1522607070464" Polarity="+">
+					<Height>66.38805213083361</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-330</X><Y>210</Y></Direction>
+					<Id>1522607070543</Id>
+					<Name><![CDATA[ProductionAdjustmentFromInventory - DesiredProduction]]></Name>
+					<X>1040</X><Y>1530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070455" TargetId="1522607070464" Polarity="+">
+					<Height>49.91599497248416</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-450</X><Y>20</Y></Direction>
+					<Id>1522607070544</Id>
+					<Name><![CDATA[ExpectedOrderRate - DesiredProduction]]></Name>
+					<X>1160</X><Y>1720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070455" TargetId="1522607070584" Polarity="-">
+					<Height>-78.50981785748948</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>100</X><Y>0</Y></Direction>
+					<Id>1522607070531</Id>
+					<Name><![CDATA[ExpectedOrderRate - ChangeInExpOrders]]></Name>
+					<X>1160</X><Y>1720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070457" TargetId="1522607070584" Polarity="-">
+					<Height>-55.933230071199965</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>30</X><Y>-110</Y></Direction>
+					<Id>1522607070532</Id>
+					<Name><![CDATA[TimeToAverageOrderRate - ChangeInExpOrders]]></Name>
+					<X>1230</X><Y>1830</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070444" TargetId="1522607070583" Polarity="+">
+					<Height>-8.578151406885866</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>10</X><Y>-140</Y></Direction>
+					<Id>1522607070515</Id>
+					<Name><![CDATA[OrderFulfillmentRatio - ShipmentRate]]></Name>
+					<X>1330</X><Y>1420</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070586" TargetId="1522607070584" Polarity="+">
+					<Height>134.40307860516248</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.8410164</PolarityPosition>
+					<Direction><X>-370</X><Y>190</Y></Direction>
+					<Id>1522607070530</Id>
+					<Name><![CDATA[<CustomerOrderRate> - ChangeInExpOrders]]></Name>
+					<X>1630</X><Y>1530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070585" TargetId="1522607070582" Polarity="+">
+					<Height>66.05666928140423</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>320</X><Y>0</Y></Direction>
+					<Id>1522607070534</Id>
+					<Name><![CDATA[ProductionStartRate - ProductionRate]]></Name>
+					<X>570</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070459" TargetId="1522607070582" Polarity="-">
+					<Height>14.223852404616025</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>-130</Y></Direction>
+					<Id>1522607070533</Id>
+					<Name><![CDATA[ManufacturingCycleTime - ProductionRate]]></Name>
+					<X>850</X><Y>1410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070462" TargetId="1522607070460" Polarity="-">
+					<Height>33.64837314320957</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>10</X><Y>200</Y></Direction>
+					<Id>1522607070537</Id>
+					<Name><![CDATA[WorkInProcessInventory - AdjustmentForWIP]]></Name>
+					<X>710</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070463" TargetId="1522607070460" Polarity="+">
+					<Height>-26.482535694267995</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>-60</Y></Direction>
+					<Id>1522607070535</Id>
+					<Name><![CDATA[DesiredWIP - AdjustmentForWIP]]></Name>
+					<X>850</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070459" TargetId="1522607070463" Polarity="+">
+					<Height>25.524865872714003</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>130</Y></Direction>
+					<Id>1522607070541</Id>
+					<Name><![CDATA[ManufacturingCycleTime - DesiredWIP]]></Name>
+					<X>850</X><Y>1410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070464" TargetId="1522607070463" Polarity="+">
+					<Height>-35.62208175098638</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-200</Y></Direction>
+					<Id>1522607070542</Id>
+					<Name><![CDATA[DesiredProduction - DesiredWIP]]></Name>
+					<X>710</X><Y>1740</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070461" TargetId="1522607070460" Polarity="-">
+					<Height>-23.145647107074552</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>20</X><Y>-100</Y></Direction>
+					<Id>1522607070536</Id>
+					<Name><![CDATA[WIPAdjustmentTime - AdjustmentForWIP]]></Name>
+					<X>700</X><Y>1580</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070586" TargetId="1522607070446" Polarity="+">
+					<Height>-21.644123192367715</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-170</X><Y>-160</Y></Direction>
+					<Id>1522607070516</Id>
+					<Name><![CDATA[<CustomerOrderRate> - DesiredShipmentRate]]></Name>
+					<X>1630</X><Y>1530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070446" TargetId="1522607070583" Polarity="+">
+					<Height>-7.404230961479186</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>-90</Y></Direction>
+					<Id>1522607070514</Id>
+					<Name><![CDATA[DesiredShipmentRate - ShipmentRate]]></Name>
+					<X>1460</X><Y>1370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070452" TargetId="1522607070449" Polarity="+">
+					<Height>-17.014434908134064</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>60</X><Y>170</Y></Direction>
+					<Id>1522607070522</Id>
+					<Name><![CDATA[Inventory - MaximumShipmentRate]]></Name>
+					<X>1080</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070449" TargetId="1522607070444" Polarity="+">
+					<Height>-15.649301110536442</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>190</X><Y>-30</Y></Direction>
+					<Id>1522607070513</Id>
+					<Name><![CDATA[MaximumShipmentRate - OrderFulfillmentRatio]]></Name>
+					<X>1140</X><Y>1450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070446" TargetId="1522607070444" Polarity="-">
+					<Height>27.082777200991885</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>50</Y></Direction>
+					<Id>1522607070512</Id>
+					<Name><![CDATA[DesiredShipmentRate - OrderFulfillmentRatio]]></Name>
+					<X>1460</X><Y>1370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070450" TargetId="1522607070449" Polarity="-">
+					<Height>38.78255107630042</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>-70</Y></Direction>
+					<Id>1522607070521</Id>
+					<Name><![CDATA[MinimumOrderProcessingTime - MaximumShipmentRate]]></Name>
+					<X>1250</X><Y>1520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070450" TargetId="1522607070448" Polarity="+">
+					<Height>30.5946528342514</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>50</X><Y>110</Y></Direction>
+					<Id>1522607070520</Id>
+					<Name><![CDATA[MinimumOrderProcessingTime - DesiredInventoryCoverage]]></Name>
+					<X>1250</X><Y>1520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070452" TargetId="1522607070447" Polarity="+">
+					<Height>35.93750130157633</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>-80</Y></Direction>
+					<Id>1522607070517</Id>
+					<Name><![CDATA[Inventory - InventoryCoverage]]></Name>
+					<X>1080</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070583" TargetId="1522607070447" Polarity="-">
+					<Height>-32.974192190316884</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>-80</Y></Direction>
+					<Id>1522607070518</Id>
+					<Name><![CDATA[ShipmentRate - InventoryCoverage]]></Name>
+					<X>1340</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070451" TargetId="1522607070448" Polarity="+">
+					<Height>21.21582285141669</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-140</X><Y>20</Y></Direction>
+					<Id>1522607070519</Id>
+					<Name><![CDATA[SafetyStockCoverage - DesiredInventoryCoverage]]></Name>
+					<X>1440</X><Y>1610</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070593" TargetId="1522607070586" Polarity="null">
+					<Height>-25.21992570704441</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>-80</Y></Direction>
+					<Id>1522607070606</Id>
+					<Name><![CDATA[<InitialCustomerOrderRate> - <CustomerOrderRate>]]></Name>
+					<X>1740</X><Y>1610</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-8355712</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070594" TargetId="1522607070586" Polarity="null">
+					<Height>24.25224218970135</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>-160</Y></Direction>
+					<Id>1522607070607</Id>
+					<Name><![CDATA[<Input> - <CustomerOrderRate>]]></Name>
+					<X>1740</X><Y>1690</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-8355712</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070454" TargetId="1522607070452" Polarity="null">
+					<Height>2.433765501406924</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-320</Y></Direction>
+					<Id>1522607070525</Id>
+					<Name><![CDATA[DesiredInventory - Inventory]]></Name>
+					<X>1160</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070586" TargetId="1522607070455" Polarity="null">
+					<Height>-4.2612509509799565</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-470</X><Y>190</Y></Direction>
+					<Id>1522607070528</Id>
+					<Name><![CDATA[<CustomerOrderRate> - ExpectedOrderRate]]></Name>
+					<X>1630</X><Y>1530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070463" TargetId="1522607070462" Polarity="null">
+					<Height>-0.4783357143714966</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-140</X><Y>-260</Y></Direction>
+					<Id>1522607070539</Id>
+					<Name><![CDATA[DesiredWIP - WorkInProcessInventory]]></Name>
+					<X>850</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070437" TargetId="1522607070585" Polarity="+">
+					<Height>-9.257454388286874</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>210</X><Y>-110</Y></Direction>
+					<Id>1522607070509</Id>
+					<Name><![CDATA[NormalProductionRate - ProductionStartRate]]></Name>
+					<X>360</X><Y>1390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070464" TargetId="1522607070432" Polarity="+">
+					<Height>68.03992976311724</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-230</X><Y>-230</Y></Direction>
+					<Id>1522607070497</Id>
+					<Name><![CDATA[DesiredProduction - DesiredProductionStartRate]]></Name>
+					<X>710</X><Y>1740</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070460" TargetId="1522607070432" Polarity="+">
+					<Height>24.75693097121399</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-240</X><Y>30</Y></Direction>
+					<Id>1522607070498</Id>
+					<Name><![CDATA[AdjustmentForWIP - DesiredProductionStartRate]]></Name>
+					<X>720</X><Y>1480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070595" TargetId="1522607070437" Polarity="+">
+					<Height>1.0084733843277718</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>240</X><Y>0</Y></Direction>
+					<Id>1522607070504</Id>
+					<Name><![CDATA[<LaborForce> - NormalProductionRate]]></Name>
+					<X>120</X><Y>1390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070596" TargetId="1522607070437" Polarity="+">
+					<Height>2.1097383921101027</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-180</Y></Direction>
+					<Id>1522607070503</Id>
+					<Name><![CDATA[<NormalLaborProductivity> - NormalProductionRate]]></Name>
+					<X>220</X><Y>1570</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-16777216</Color>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070426" TargetId="1522607070597" Polarity="+">
+					<Height>68.64077739717621</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-320</Y></Direction>
+					<Id>1522607070508</Id>
+					<Name><![CDATA[DesiredRequestCreationRate - RequestCreationRate]]></Name>
+					<X>360</X><Y>3870</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070438" TargetId="1522607070429" Polarity="-">
+					<Height>67.96767094014109</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>180</X><Y>270</Y></Direction>
+					<Id>1522607070494</Id>
+					<Name><![CDATA[AuthorizedRequests - AdjustmentForRequests]]></Name>
+					<X>660</X><Y>3560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070439" TargetId="1522607070429" Polarity="+">
+					<Height>-53.46546970450902</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>-330</Y></Direction>
+					<Id>1522607070493</Id>
+					<Name><![CDATA[RequestAdjustmentTime - AdjustmentForRequests]]></Name>
+					<X>850</X><Y>4160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070429" TargetId="1522607070426" Polarity="+">
+					<Height>161.18890199295583</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-480</X><Y>40</Y></Direction>
+					<Id>1522607070488</Id>
+					<Name><![CDATA[AdjustmentForRequests - DesiredRequestCreationRate]]></Name>
+					<X>840</X><Y>3830</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070438" TargetId="1522607070599" Polarity="+">
+					<Height>173.02277419259815</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>800</X><Y>0</Y></Direction>
+					<Id>1522607070487</Id>
+					<Name><![CDATA[AuthorizedRequests - HiringRate]]></Name>
+					<X>660</X><Y>3560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070599" TargetId="1522607070598" Polarity="+">
+					<Height>123.09862340354408</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-620</X><Y>10</Y></Direction>
+					<Id>1522607070507</Id>
+					<Name><![CDATA[HiringRate - RequestApprovalRate]]></Name>
+					<X>1460</X><Y>3560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070435" TargetId="1522607070428" Polarity="-">
+					<Height>59.67010306854996</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>100</X><Y>420</Y></Direction>
+					<Id>1522607070490</Id>
+					<Name><![CDATA[LaborForce - AdjustmentToLaborForce]]></Name>
+					<X>1620</X><Y>3550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070434" TargetId="1522607070428" Polarity="-">
+					<Height>1.2678275019429748</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>-50</X><Y>-150</Y></Direction>
+					<Id>1522607070492</Id>
+					<Name><![CDATA[LaborAdjustmentTime - AdjustmentToLaborForce]]></Name>
+					<X>1770</X><Y>4120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070431" TargetId="1522607070600" Polarity="-">
+					<Height>12.075474858503355</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>70</X><Y>170</Y></Direction>
+					<Id>1522607070496</Id>
+					<Name><![CDATA[AverageDurationOfEmployment - AttritionRate]]></Name>
+					<X>1680</X><Y>3370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070600" TargetId="1522607070599" Polarity="+">
+					<Height>-86.9380840125602</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-290</X><Y>20</Y></Direction>
+					<Id>1522607070485</Id>
+					<Name><![CDATA[AttritionRate - HiringRate]]></Name>
+					<X>1750</X><Y>3540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070435" TargetId="1522607070600" Polarity="+">
+					<Height>-81.59806226833254</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>-10</Y></Direction>
+					<Id>1522607070495</Id>
+					<Name><![CDATA[LaborForce - AttritionRate]]></Name>
+					<X>1620</X><Y>3550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070601" TargetId="1522607070433" Polarity="+">
+					<Height>27.246038118933285</Height>
+					<Polarity>+</Polarity>
+					<PolarityPosition>-0.95</PolarityPosition>
+					<Direction><X>60</X><Y>110</Y></Direction>
+					<Id>1522607070500</Id>
+					<Name><![CDATA[<DesiredProductionStartRate> - FactoryLaborRequest]]></Name>
+					<X>2250</X><Y>3820</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070436" TargetId="1522607070433" Polarity="-">
+					<Height>-53.03744474902598</Height>
+					<Polarity>-</Polarity>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>10</X><Y>-240</Y></Direction>
+					<Id>1522607070499</Id>
+					<Name><![CDATA[NormalLaborProductivity - FactoryLaborRequest]]></Name>
+					<X>2300</X><Y>4170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070433" TargetId="1522607070428" Polarity="null">
+					<Height>71.28072902534802</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-590</X><Y>40</Y></Direction>
+					<Id>1522607070491</Id>
+					<Name><![CDATA[FactoryLaborRequest - AdjustmentToLaborForce]]></Name>
+					<X>2310</X><Y>3930</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070427" TargetId="1522607070599" Polarity="null">
+					<Height>15.886523691513275</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>-190</Y></Direction>
+					<Id>1522607070486</Id>
+					<Name><![CDATA[InformationDelay - HiringRate]]></Name>
+					<X>1470</X><Y>3750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070428" TargetId="1522607070426" Polarity="null">
+					<Height>463.46505926527954</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-1360</X><Y>-100</Y></Direction>
+					<Id>1522607070489</Id>
+					<Name><![CDATA[AdjustmentToLaborForce - DesiredRequestCreationRate]]></Name>
+					<X>1720</X><Y>3970</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070608" TargetId="1522607070579" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-20</X><Y>-20</Y></Direction>
+					<Id>1522607070555</Id>
+					<Name><![CDATA[<TIME_STEP> - <Input>]]></Name>
+					<X>420</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070446" TargetId="1522607070610" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>20</X><Y>20</Y></Direction>
+					<Id>1522607070510</Id>
+					<Name><![CDATA[DesiredShipmentRate - <RatioOfMaximumToDesiredShipments>]]></Name>
+					<X>1460</X><Y>1370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070449" TargetId="1522607070611" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>20</X><Y>20</Y></Direction>
+					<Id>1522607070511</Id>
+					<Name><![CDATA[MaximumShipmentRate - <RatioOfMaximumToDesiredShipments>]]></Name>
+					<X>1140</X><Y>1450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070609" TargetId="1522607070483" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-20</X><Y>-40</Y></Direction>
+					<Id>1522607070570</Id>
+					<Name><![CDATA[<TIME_STEP> - WhiteNoise]]></Name>
+					<X>940</X><Y>510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1522607070568" TargetId="1522607070483" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-20</X><Y>-20</Y></Direction>
+					<Id>1522607070572</Id>
+					<Name><![CDATA[WhiteNoise_random - WhiteNoise]]></Name>
+					<X>940</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+			</Dependences>
+			<CausalLoops>
+				<CausalLoop Clockwise="false">
+					<Type><![CDATA[B]]></Type>
+					<Id>1522607070587</Id>
+					<Name><![CDATA[loop]]></Name>
+					<X>1204</X><Y>1344</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[B]]></Type>
+					<Id>1522607070589</Id>
+					<Name><![CDATA[loop1]]></Name>
+					<X>994</X><Y>1347</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[B]]></Type>
+					<Id>1522607070591</Id>
+					<Name><![CDATA[loop2]]></Name>
+					<X>618</X><Y>1422</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[B]]></Type>
+					<Id>1522607070602</Id>
+					<Name><![CDATA[loop3]]></Name>
+					<X>586</X><Y>3792</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+				<CausalLoop Clockwise="true">
+					<Type><![CDATA[B]]></Type>
+					<Id>1522607070603</Id>
+					<Name><![CDATA[loop4]]></Name>
+					<X>1152</X><Y>3979</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<Text><![CDATA[]]></Text>
+				</CausalLoop>
+			</CausalLoops>
+			<Events>
+				<Event>
+					<Id>1522607070567</Id>
+					<Name><![CDATA[_VensimTimeStepEvent]]></Name>
+					<Description><![CDATA[This event occurs on every time step in terms of Vensim® model]]></Description>
+					<X>20</X><Y>-90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1522656000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0.0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[TIME_STEP]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[WhiteNoise_random = uniform();
+]]></Action>
+				</Event>
+			</Events>
+			<TableFunctions>
+				<TableFunction AccessType="public" StaticFunction="true">
+					<Id>1522607070453</Id>
+					<Name><![CDATA[TableForOrderFulfillment]]></Name>
+					<Description><![CDATA[The ability to ship is constrained by inventory availability.  As the inventory 
+level drops, the 
+        fraction of customer orders that can be filled decreases.  When inventory is 
+zero, shipments
+         cease.  Unfilled customer orders are lost.\!\!\!]]></Description>
+					<Unit></Unit> 
+					<X>1410</X><Y>1520</Y>
+					<Label><X>-58</X><Y>16</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>NEAREST</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+						</TableReference>
+							<ArgumentColumnReference>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[0.2]]></Argument>
+					<Argument><![CDATA[0.4]]></Argument>
+					<Argument><![CDATA[0.6]]></Argument>
+					<Argument><![CDATA[0.8]]></Argument>
+					<Argument><![CDATA[1.0]]></Argument>
+					<Argument><![CDATA[1.2]]></Argument>
+					<Argument><![CDATA[1.4]]></Argument>
+					<Argument><![CDATA[1.6]]></Argument>
+					<Argument><![CDATA[1.8]]></Argument>
+					<Argument><![CDATA[2.0]]></Argument>
+					<Argument><![CDATA[3.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.2]]></Value>
+					<Value><![CDATA[0.4]]></Value>
+					<Value><![CDATA[0.58]]></Value>
+					<Value><![CDATA[0.73]]></Value>
+					<Value><![CDATA[0.85]]></Value>
+					<Value><![CDATA[0.93]]></Value>
+					<Value><![CDATA[0.97]]></Value>
+					<Value><![CDATA[0.99]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+				</TableFunction>
+			</TableFunctions>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1522607070285</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Shapes>
+				<Text>
+					<Id>1522607070588</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>1206</X><Y>1374</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Order Fulfillment]]></Text>
+					<Font>
+						<Name>Helvetica</Name>
+						<Size>8</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1522607070590</Id>
+					<Name><![CDATA[text1]]></Name>
+					<X>996</X><Y>1377</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Inventory Control]]></Text>
+					<Font>
+						<Name>Helvetica</Name>
+						<Size>8</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1522607070592</Id>
+					<Name><![CDATA[text2]]></Name>
+					<X>620</X><Y>1452</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[WIP Control]]></Text>
+					<Font>
+						<Name>Helvetica</Name>
+						<Size>8</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1522607070604</Id>
+					<Name><![CDATA[text3]]></Name>
+					<X>573</X><Y>3824</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Request Creation Loop]]></Text>
+					<Font>
+						<Name>Helvetica</Name>
+						<Size>8</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1522607070605</Id>
+					<Name><![CDATA[text4]]></Name>
+					<X>1140</X><Y>4019</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Labour Adjustment]]></Text>
+					<Font>
+						<Name>Helvetica</Name>
+						<Size>8</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1522607070612</Id>
+					<Name><![CDATA[text5]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>0</X><Y>-150</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[These elements were created for support of Vensim®-specific functions used in the equations]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Line>
+					<Id>1522607070613</Id>
+					<Name><![CDATA[line]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>0</X><Y>-130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>2</LineWidth>
+					<LineColor>-12156236</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>2500</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Text>
+					<Id>1522607070614</Id>
+					<Name><![CDATA[text6]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>0</X><Y>-70</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[These elements were defined using text editor and were not present in sketch editor]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Line>
+					<Id>1522607070615</Id>
+					<Name><![CDATA[line1]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>0</X><Y>-50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>2</LineWidth>
+					<LineColor>-12156236</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>2500</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+			</Shapes>
+			<Controls>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070616</Id>
+					<Name><![CDATA[button]]></Name>
+					<X>40</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[ProductionAndInventory.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[>]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070617</Id>
+					<Name><![CDATA[button1]]></Name>
+					<X>0</X><Y>1100</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[CustomerOrders.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[<]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070618</Id>
+					<Name><![CDATA[button2]]></Name>
+					<X>40</X><Y>1100</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View3.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[>]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070619</Id>
+					<Name><![CDATA[button3]]></Name>
+					<X>0</X><Y>2200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[ProductionAndInventory.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[<]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070620</Id>
+					<Name><![CDATA[button4]]></Name>
+					<X>40</X><Y>2200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View4.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[>]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070621</Id>
+					<Name><![CDATA[button5]]></Name>
+					<X>0</X><Y>3300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View3.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[<]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070622</Id>
+					<Name><![CDATA[button6]]></Name>
+					<X>40</X><Y>3300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View5.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[>]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070623</Id>
+					<Name><![CDATA[button7]]></Name>
+					<X>0</X><Y>4400</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View4.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[<]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070624</Id>
+					<Name><![CDATA[button8]]></Name>
+					<X>40</X><Y>4400</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View6.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[>]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070625</Id>
+					<Name><![CDATA[button9]]></Name>
+					<X>0</X><Y>5500</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="40" Height="20" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[View5.navigateTo();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[<]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+			</Controls>
+			<Areas>
+				<Area>
+					<Id>1522607070573</Id>
+					<Name><![CDATA[CustomerOrders]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[Customer Orders]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+				<Area>
+					<Id>1522607070574</Id>
+					<Name><![CDATA[ProductionAndInventory]]></Name>
+					<X>0</X><Y>1100</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[Production and Inventory]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+				<Area>
+					<Id>1522607070575</Id>
+					<Name><![CDATA[View3]]></Name>
+					<X>0</X><Y>2200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[View 3]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+				<Area>
+					<Id>1522607070576</Id>
+					<Name><![CDATA[View4]]></Name>
+					<X>0</X><Y>3300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[View 4]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+				<Area>
+					<Id>1522607070577</Id>
+					<Name><![CDATA[View5]]></Name>
+					<X>0</X><Y>4400</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[View 5]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+				<Area>
+					<Id>1522607070578</Id>
+					<Name><![CDATA[View6]]></Name>
+					<X>0</X><Y>5500</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[View 6]]></Title>
+					<Width>2500</Width>
+					<Height>1100</Height>
+				</Area>
+			</Areas>
+
+		</ActiveObjectClass>
+	</ActiveObjectClasses>	
+	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
+	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
+	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+	<FixedTimeStep>0.01</FixedTimeStep>
+	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+	<TimeAccuracy>1.0E-5</TimeAccuracy>
+	<Frame>
+		<Width>2500</Width>
+		<Height>1100</Height>
+	</Frame>
+	<Database>
+		<Logging>false</Logging>
+		<AutoExport>false</AutoExport>
+		<ImportSettings>
+		</ImportSettings>
+		<ExportSettings>
+			<ExportExcelFilePath><![CDATA[]]></ExportExcelFilePath>
+		</ExportSettings>
+	</Database>
+	
+	<RunConfiguration ActiveObjectClassId="1522607070289">
+		<Id>1522607070626</Id>
+		<Name><![CDATA[RunConfiguration]]></Name>
+		<ModelTimeProperties>
+			<StopOption><![CDATA[Stop at specified time]]></StopOption>
+			<InitialDate><![CDATA[1522540800000]]></InitialDate>	
+			<InitialTime><![CDATA[0.0]]></InitialTime>	
+			<FinalDate><![CDATA[1525132800000]]></FinalDate>	
+			<FinalTime><![CDATA[100.0]]></FinalTime>	
+		</ModelTimeProperties>
+		<AnimationProperties>
+			<StopNever>false</StopNever>
+			<ExecutionMode>virtualTime</ExecutionMode>
+			<RealTimeScale>1.0</RealTimeScale>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<Maximized>false</Maximized>
+		</AnimationProperties>
+		<Inputs>		
+		</Inputs>
+		<Outputs>
+		</Outputs>
+	</RunConfiguration>
+	<Experiments>	
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1522607070289">
+			<Id>1522607070422</Id>
+			<Name><![CDATA[Simulation]]></Name>
+			<Description><![CDATA[Simulation experiment class. Used to run Main class of the model]]></Description>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+			<SnapshotFile></SnapshotFile>
+
+			<Shapes>
+				<Text>
+					<Id>1522607070423</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>40</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12490271</Color>
+					<Text><![CDATA[VENSIM FINAL]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+			<Controls>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1522607070424</Id>
+					<Name><![CDATA[button]]></Name>
+					<X>40</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="100" Height="30" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[if ( getState() == IDLE )
+	run();
+getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[Run]]></LabelText>
+						<LabelCode><![CDATA[getState() == IDLE ?
+	"Run" :
+	"Top level agent"]]></LabelCode>
+					</ExtendedProperties>
+				</Control>
+			</Controls>
+
+			<Parameters>			
+			</Parameters>			
+			<PresentationProperties 
+				EnableAdaptiveFrameManagement="true" 
+				EnableAntiAliasing="true"
+				EnableEnhancedModelElementsAnimation="true"
+				ToolbarCustomizableAtRuntime="true">
+				<Maximized>false</Maximized>
+				<CloseConfirmation>false</CloseConfirmation>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<ExecutionMode><![CDATA[virtualTime]]></ExecutionMode>
+				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
+				<Title><![CDATA[VENSIM FINAL : Simulation]]></Title>	
+				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
+				<RealTimeScale>1.0</RealTimeScale>
+				<UIProperty Name="Experiment Progress" Value="false"/>
+				<UIProperty Name="Simulation Progress" Value="true"/>
+				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Memory" Value="true"/>
+				<UIProperty Name="Statusbar Model Date" Value="true"/>
+				<UIProperty Name="Statusbar Model Step" Value="false"/>
+				<UIProperty Name="Statusbar Model Time" Value="true"/>
+				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
+				<UIProperty Name="Statusbar Status" Value="true"/>
+				<UIProperty Name="Toolbar Animation setup" Value="false"/>
+				<UIProperty Name="Toolbar Execution control" Value="true"/>
+				<UIProperty Name="Toolbar File" Value="false"/>
+				<UIProperty Name="Toolbar Model navigation" Value="true"/>
+				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
+				<UIProperty Name="Toolbar View" Value="false"/>
+			</PresentationProperties>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Stop at specified time]]></StopOption>
+				<InitialDate><![CDATA[1522540800000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1525132800000]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
+			</ModelTimeProperties>
+		</SimulationExperiment>	
+	</Experiments>
+</Model>
+</AnyLogicWorkspace>
