@@ -112,7 +112,7 @@
 				<Variable Class="Parameter">
 					<Id>1521653340903</Id>
 					<Name><![CDATA[node_colTable_in]]></Name>
-					<X>880</X><Y>1510</Y>
+					<X>880</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -137,7 +137,7 @@
 				<Variable Class="Parameter">
 					<Id>1521680502650</Id>
 					<Name><![CDATA[node_colTable_out]]></Name>
-					<X>880</X><Y>1540</Y>
+					<X>880</X><Y>1620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -161,7 +161,7 @@
 				<Variable Class="Parameter">
 					<Id>1521680510187</Id>
 					<Name><![CDATA[node_Terminal]]></Name>
-					<X>880</X><Y>1570</Y>
+					<X>880</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -185,7 +185,7 @@
 				<Variable Class="Parameter">
 					<Id>1521680521435</Id>
 					<Name><![CDATA[node_Tool]]></Name>
-					<X>880</X><Y>1600</Y>
+					<X>880</X><Y>1680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -206,7 +206,7 @@
 				<Variable Class="Parameter">
 					<Id>1521680532626</Id>
 					<Name><![CDATA[node_Assembly]]></Name>
-					<X>880</X><Y>1630</Y>
+					<X>880</X><Y>1710</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -230,7 +230,7 @@
 				<Variable Class="Parameter">
 					<Id>1521680542552</Id>
 					<Name><![CDATA[node_Disassembly]]></Name>
-					<X>880</X><Y>1660</Y>
+					<X>880</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -254,7 +254,7 @@
 				<Variable Class="Parameter">
 					<Id>1527837586158</Id>
 					<Name><![CDATA[NumWorkers]]></Name>
-					<X>880</X><Y>1690</Y>
+					<X>880</X><Y>1770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -279,7 +279,7 @@
 				<Variable Class="Parameter">
 					<Id>1527839368181</Id>
 					<Name><![CDATA[DemandRate]]></Name>
-					<X>880</X><Y>1720</Y>
+					<X>880</X><Y>1800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -303,7 +303,7 @@
 				<Variable Class="Parameter">
 					<Id>1529023209023</Id>
 					<Name><![CDATA[costpermeter2]]></Name>
-					<X>880</X><Y>1750</Y>
+					<X>880</X><Y>1830</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -327,7 +327,7 @@
 				<Variable Class="Parameter">
 					<Id>1529040089838</Id>
 					<Name><![CDATA[NumVRacks]]></Name>
-					<X>880</X><Y>1780</Y>
+					<X>880</X><Y>1860</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -363,6 +363,27 @@
 						<ParameterEditor>
 							<Id>1531408233095</Id>
 							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1531437787334</Id>
+					<Name><![CDATA[schedule]]></Name>
+					<X>-110</X><Y>1560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1531437787332</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -909,7 +930,7 @@
 					<ReturnType><![CDATA[AreaNode]]></ReturnType>
 					<Id>1521682713228</Id>
 					<Name><![CDATA[assignNode]]></Name>
-					<X>880</X><Y>1480</Y>
+					<X>880</X><Y>1560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16520,6 +16541,21 @@ Terminal.setY(node_terminal.getY()+25);
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1531434523094</Id>
+					<Name><![CDATA[v_Schedule]]></Name>
+					<X>960</X><Y>3710</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Schedule]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[main.schedule==1?schedule_Weekly:schedule_Normal]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1528162907116</Id>
 					<Name><![CDATA[angleToSet]]></Name>
@@ -19901,6 +19937,144 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );
 rectangle27.setWidth(viewArea.getWidth());]]></Body>
 				</Function>
 			</Functions>
+			<Schedules>
+				<Schedule>
+					<Id>1531421677891</Id>
+					<Name><![CDATA[schedule_Weekly]]></Name>
+					<Description><![CDATA[Schedule to be used when worker timings are considered]]></Description>
+					<X>960</X><Y>3650</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ValueType>onOff</ValueType>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<DefaultValue>false</DefaultValue>
+					<RepresentationMode>intervals</RepresentationMode>
+					<RepresentationType>week</RepresentationType>
+					<FirstDayOfWeek>sunday</FirstDayOfWeek>
+					<TimeUnitsInterval>hours</TimeUnitsInterval>
+					<RepeatTime>86400000</RepeatTime>
+					<RepeatTimeInterval>days</RepeatTimeInterval>
+					<IsSnapTo>false</IsSnapTo>
+					<SnapTo>1531421677829</SnapTo>
+					<SnapToTimeUnits>minutes</SnapToTimeUnits>
+					<AllDayExceptionMode>false</AllDayExceptionMode>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<IntervalsQuery>
+						<TableReference>
+						</TableReference>
+							<StartColumnReference>
+							</StartColumnReference>
+							<EndColumnReference>
+							</EndColumnReference>
+							<ValueColumnReference>
+							</ValueColumnReference>
+					</IntervalsQuery>
+					<Intervals>
+						<Interval>
+							<Start>25200000</Start>
+							<End>61200000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>111600000</Start>
+							<End>147600000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>198000000</Start>
+							<End>234000000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>284400000</Start>
+							<End>320400000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>370800000</Start>
+							<End>406800000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>457200000</Start>
+							<End>493200000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>43200000</Start>
+							<End>46800000</End>
+							<Value>false</Value>
+						</Interval>
+						<Interval>
+							<Start>129600000</Start>
+							<End>133200000</End>
+							<Value>false</Value>
+						</Interval>
+						<Interval>
+							<Start>216000000</Start>
+							<End>219600000</End>
+							<Value>false</Value>
+						</Interval>
+						<Interval>
+							<Start>302400000</Start>
+							<End>306000000</End>
+							<Value>false</Value>
+						</Interval>
+						<Interval>
+							<Start>388800000</Start>
+							<End>392400000</End>
+							<Value>false</Value>
+						</Interval>
+						<Interval>
+							<Start>475200000</Start>
+							<End>478800000</End>
+							<Value>false</Value>
+						</Interval>
+					</Intervals>
+					<Exceptions>
+					</Exceptions>
+				</Schedule>
+				<Schedule>
+					<Id>1531434418613</Id>
+					<Name><![CDATA[schedule_Normal]]></Name>
+					<Description><![CDATA[This is the schedule that is always ON]]></Description>
+					<X>960</X><Y>3680</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ValueType>onOff</ValueType>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<DefaultValue>true</DefaultValue>
+					<RepresentationMode>intervals</RepresentationMode>
+					<RepresentationType>week</RepresentationType>
+					<FirstDayOfWeek>sunday</FirstDayOfWeek>
+					<TimeUnitsInterval>hours</TimeUnitsInterval>
+					<RepeatTime>86400000</RepeatTime>
+					<RepeatTimeInterval>days</RepeatTimeInterval>
+					<IsSnapTo>false</IsSnapTo>
+					<SnapTo>1531421677829</SnapTo>
+					<SnapToTimeUnits>minutes</SnapToTimeUnits>
+					<AllDayExceptionMode>false</AllDayExceptionMode>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<IntervalsQuery>
+						<TableReference>
+						</TableReference>
+							<StartColumnReference>
+							</StartColumnReference>
+							<EndColumnReference>
+							</EndColumnReference>
+							<ValueColumnReference>
+							</ValueColumnReference>
+					</IntervalsQuery>
+					<Intervals>
+					</Intervals>
+					<Exceptions>
+					</Exceptions>
+				</Schedule>
+			</Schedules>
 			<AnalysisData>
     			<Statistics>
 					<Id>1526631701149</Id>
@@ -28390,7 +28564,7 @@ agent.i--;]]></Code>
 					<Name><![CDATA[VerticalRack]]></Name>
 					<Description><![CDATA[having 2 machines at the same home location doubles its capacity. allowing either 1 
 worker to call 2 racks or 2 workers to work simulataneously..]]></Description>
-					<X>920</X><Y>1720</Y>
+					<X>970</X><Y>3550</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29304,7 +29478,7 @@ worker to call 2 racks or 2 workers to work simulataneously..]]></Description>
 				<EmbeddedObject>
 					<Id>1528407665738</Id>
 					<Name><![CDATA[Technicians]]></Name>
-					<X>920</X><Y>1770</Y>
+					<X>970</X><Y>3600</Y>
 					<Label><X>-10</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -29326,6 +29500,9 @@ worker to call 2 racks or 2 workers to work simulataneously..]]></Description>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityDefinitionType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.CAPACITY_SCHEDULE_ON_OFF]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
@@ -29341,9 +29518,15 @@ worker to call 2 racks or 2 workers to work simulataneously..]]></Description>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityScheduleOnOff]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[v_Schedule]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityOnValue]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[numWorkers]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[shiftGroupSchedules]]></Name>
@@ -41126,6 +41309,15 @@ toDegrees(0)]]></RotationCode>
 					<ClassName><![CDATA[Main]]></ClassName>
 					<ItemName><![CDATA[b_ArrivalTable]]></ItemName>
 				</InputReference>
+    		</RunConfigurationInput>
+    		<RunConfigurationInput>
+				<Id>1531438259389</Id>
+				<Name><![CDATA[Schedule ( 1 for ON )]]></Name>
+				<InputReference>
+					<PackageName><![CDATA[wip_repr_model_diffrack7_1]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[schedule]]></ItemName>
+				</InputReference>
     		</RunConfigurationInput>		
 		</Inputs>
 		<Outputs>
@@ -41353,6 +41545,21 @@ toDegrees(0)]]></RotationCode>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1531435090062</Id>
+					<Name><![CDATA[v_sched]]></Name>
+					<X>-200</X><Y>810</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 			</Variables>
@@ -42207,6 +42414,11 @@ getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
+						<ActionCode><![CDATA[if(value){
+v_sched=1;
+}else{
+v_sched=0;
+}]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
@@ -42282,6 +42494,12 @@ getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
 					<ParameterName><![CDATA[b_ArrivalTable]]></ParameterName>
 					<ParameterValue Class="CodeValue">
 						<Code><![CDATA[arrivalTable]]></Code>
+					</ParameterValue>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[schedule]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[v_sched]]></Code>
 					</ParameterValue>
 				</Parameter>
 			</Parameters>			
