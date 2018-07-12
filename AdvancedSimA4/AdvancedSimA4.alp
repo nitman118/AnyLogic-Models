@@ -321,7 +321,7 @@ return this.spot;
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[40]]></Code>
+							<Code><![CDATA[50]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1531314170249</Id>
@@ -5455,6 +5455,9 @@ agent.cs = ((CleaningSpot)unit);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[sendResources]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[destinationType]]></Name>
@@ -5479,6 +5482,9 @@ agent.cs = ((CleaningSpot)unit);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[attachResources]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entityLocationQueue]]></Name>
@@ -9191,7 +9197,7 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
     			<TimeStackChart>
 					<Id>1531186289259</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>40</X><Y>2440</Y>
+					<X>40</X><Y>2430</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9209,14 +9215,14 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>260</Width>
-					<Height>220</Height>
+					<Height>280</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
 						<Width>180</Width>
-						<Height>130</Height>
+						<Height>170</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -9224,7 +9230,7 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>50</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -10917,6 +10923,15 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
 					<ItemName><![CDATA[chart1]]></ItemName>
 				</OutputReference>
     		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Margins]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[advancedsima4]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[plot1]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
 		</Outputs>
 	</RunConfiguration>
 	<Experiments>	
@@ -10936,6 +10951,25 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
 			<SnapshotFile></SnapshotFile>
 
 			<Shapes>
+				<Image>
+					<Id>1531188695597</Id>
+					<Name><![CDATA[image]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Width>1000</Width>
+					<Height>600</Height>
+					<Rotation>0.0</Rotation>
+					<ImageFiles>
+						<ImageFile><![CDATA[download.jpg]]></ImageFile>
+					</ImageFiles>
+					<OriginalSize>false</OriginalSize>
+				</Image>
 				<Text>
 					<Id>0</Id>
 					<Name><![CDATA[text]]></Name>
@@ -10957,25 +10991,6 @@ ServiceRequest sr = new ServiceRequest(((CleaningSpot)unit));
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Image>
-					<Id>1531188695597</Id>
-					<Name><![CDATA[image]]></Name>
-					<X>140</X><Y>110</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Width>660</Width>
-					<Height>400</Height>
-					<Rotation>0.0</Rotation>
-					<ImageFiles>
-						<ImageFile><![CDATA[download.jpg]]></ImageFile>
-					</ImageFiles>
-					<OriginalSize>false</OriginalSize>
-				</Image>
 			</Shapes>
 
 			<Parameters>			
