@@ -4,10 +4,11 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.2.3.201711301819" AlpVersion="8.0.4">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
 <Model>
 	<Id>1514742887196</Id>
 	<Name><![CDATA[RMB2_v3]]></Name>
+	<Description><![CDATA[Traditionally, milking barns have been designed based on experience alone. However, with the advancements in robotic technologies and engineering in general, principles from queuing networks can be applied to achieve an optimal design of the layout.Thus, a suboptimal design based on conventional approaches can have an undesirable effect on certain performance measures such as facility utilization, waiting times of cows, and so on. RMBs (Robotic Milking Barns) have to be organized in the best possible way to increase the milk production and this paper incorporates the stochastic behavior of the cows and applies principles from queuing theory for an optimal design of the Robotic Milking Barns.]]></Description>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[model]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>
@@ -17,8 +18,6 @@
 			<Id>1514742887201</Id>
 			<Name><![CDATA[Main]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Import><![CDATA[import jdk.nashorn.internal.ir.ReturnNode;
 import javax.inject.Inject;]]></Import>
 			<StartupCode><![CDATA[barrier_2.setVisible(false);
@@ -51,6 +50,18 @@ import javax.inject.Inject;]]></Import>
 				</VelocityCode>
 				<OnExitFlowchartBlock><![CDATA[
 ]]></OnExitFlowchartBlock>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -399,21 +410,6 @@ import javax.inject.Inject;]]></Import>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1515550739344</Id>
-					<Name><![CDATA[int_Cows]]></Name>
-					<X>780</X><Y>470</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1515576107599</Id>
 					<Name><![CDATA[var_avg_QLength_concFeed]]></Name>
 					<X>1360</X><Y>860</Y>
@@ -501,6 +497,30 @@ import javax.inject.Inject;]]></Import>
 						<ParameterEditor>
 							<Id>1515287176854</Id>
 							<Label><![CDATA[par_ConcFeed]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1531483458934</Id>
+					<Name><![CDATA[int_Cows]]></Name>
+					<X>780</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[20]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1531483458932</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -10372,9 +10392,6 @@ import javax.inject.Inject;]]></Import>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.MANUAL]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
@@ -10416,7 +10433,7 @@ import javax.inject.Inject;]]></Import>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[10]]></Code>
+								<Code><![CDATA[int_Cows]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10577,6 +10594,18 @@ import javax.inject.Inject;]]></Import>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[changeDimensions]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[width]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[height]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -17478,7 +17507,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<ShowLabel>false</ShowLabel>
 					<Lock>true</Lock>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Width>654.04</Width>
@@ -17546,9 +17574,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>line</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -17560,6 +17586,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1515023940220" TargetId="1515384960065">
 					<Id>1515023940223</Id>
@@ -17577,9 +17610,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -17594,6 +17625,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>60</X><Y>15</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<PointNode>
 					<Id>1515023940220</Id>
@@ -17626,9 +17664,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -17643,6 +17679,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>-16.563000000000002</X><Y>-0.16800000000000637</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1515023940220" TargetId="1514747467052">
 					<Id>1515023938450</Id>
@@ -17660,9 +17703,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -17674,6 +17715,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>45.716</X><Y>88.576</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<PointNode>
 					<Id>1514747467052</Id>
@@ -17706,9 +17754,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -17720,6 +17766,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>-5</X><Y>-28</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<PointNode>
 					<Id>1514747136272</Id>
@@ -18110,9 +18163,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18124,6 +18175,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>-105.349</X><Y>18.794</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1515262871591" TargetId="1515385099545">
 					<Id>1515274523930</Id>
@@ -18141,9 +18199,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18155,6 +18211,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>25</X><Y>80</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<PointNode>
 					<Id>1515274111762</Id>
@@ -18202,9 +18265,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18216,6 +18277,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>-40.477999999999994</X><Y>39.278</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<RectangleNode>
 					<Id>1515384960065</Id>
@@ -18270,9 +18338,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18284,6 +18350,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1515385099545" TargetId="1515274111762">
 					<Id>1515385099547</Id>
@@ -18301,9 +18374,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18318,6 +18389,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>44</X><Y>-3</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1515384960065" TargetId="1515200954600">
 					<Id>1515385126450</Id>
@@ -18335,9 +18413,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -18349,6 +18425,13 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<RectangleNode>
 					<Id>1515200954600</Id>
@@ -18645,7 +18728,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18667,7 +18749,7 @@ selective gate checks the text on the button and uses that to change booleans to
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>382</X><Y>248</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/barrier_2.x3d]]></FileName>
+					<FileName><![CDATA[3d/barrier_2.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_28]]></Name>
@@ -18704,7 +18786,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18727,7 +18808,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18750,7 +18830,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18773,7 +18852,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18795,7 +18873,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18818,7 +18895,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18841,7 +18917,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18864,7 +18939,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18886,7 +18960,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18908,7 +18981,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18931,7 +19003,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18954,7 +19025,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -18977,7 +19047,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19000,7 +19069,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19023,7 +19091,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19046,7 +19113,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19069,7 +19135,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19092,7 +19157,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19115,7 +19179,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19137,7 +19200,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19159,7 +19221,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -19184,7 +19245,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -19209,7 +19269,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -19234,7 +19293,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -19259,7 +19317,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19281,7 +19338,6 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -19345,10 +19401,8 @@ selective gate checks the text on the button and uses that to change booleans to
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="200" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="200" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[if(self.getText().equals("SELECTIVE GATE-OFF"))
@@ -19389,9 +19443,8 @@ Cubicles.resetStats();
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="50" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
+					<BasicProperties Width="50" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<FillColor>-1644806</FillColor>
 						<TextColor>-65536</TextColor>
 						<Enabled>true</Enabled>
@@ -19411,10 +19464,8 @@ Cubicles.resetStats();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="190" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor>-4144960</FillColor>
+					<BasicProperties Width="190" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
 					<ExtendedProperties>
@@ -19435,10 +19486,8 @@ Cubicles.resetStats();
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="120" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="120" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[MilkingRobots.resetStats();
@@ -19464,10 +19513,8 @@ var_MilkAmount = 0;
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="190" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor>-4144960</FillColor>
+					<BasicProperties Width="190" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
 					<ExtendedProperties>
@@ -19488,10 +19535,8 @@ var_MilkAmount = 0;
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="190" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor>-4144960</FillColor>
+					<BasicProperties Width="190" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
 					<ExtendedProperties>
@@ -19512,10 +19557,8 @@ var_MilkAmount = 0;
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="190" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor>-4144960</FillColor>
+					<BasicProperties Width="190" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
 					<ExtendedProperties>
@@ -19536,10 +19579,8 @@ var_MilkAmount = 0;
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<BasicProperties Width="190" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor>-4144960</FillColor>
+					<BasicProperties Width="190" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
 					<ExtendedProperties>
@@ -19560,10 +19601,8 @@ var_MilkAmount = 0;
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="70" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="70" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[if(self.getText().equals("Run"))
@@ -19591,10 +19630,8 @@ cowsEnter.inject(int_Cows);
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[if(self.getText()=="Priority OFF")
@@ -19660,7 +19697,6 @@ this.boolQueue = false;
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
@@ -19726,7 +19762,6 @@ this.boolQueue = false;
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
 					<ShowCDF>true</ShowCDF>
@@ -19789,7 +19824,6 @@ this.boolQueue = false;
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
 					<ShowCDF>true</ShowCDF>
@@ -19852,7 +19886,6 @@ this.boolQueue = false;
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
 					<ShowCDF>true</ShowCDF>
@@ -19915,7 +19948,6 @@ this.boolQueue = false;
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
 					<ShowCDF>true</ShowCDF>
@@ -19957,8 +19989,6 @@ this.boolQueue = false;
 			<Id>1515024299771</Id>
 			<Name><![CDATA[Cow]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515024299770</Id>
@@ -19984,6 +20014,18 @@ this.boolQueue = false;
 					<Code><![CDATA[0.05]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -20192,7 +20234,6 @@ this.boolQueue = false;
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -20215,7 +20256,6 @@ this.boolQueue = false;
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -20237,7 +20277,6 @@ this.boolQueue = false;
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -20254,7 +20293,7 @@ this.boolQueue = false;
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>-3</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cow.x3d]]></FileName>
+					<FileName><![CDATA[3d/cow.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_Color_007]]></Name>
@@ -20294,8 +20333,6 @@ this.boolQueue = false;
 			<Id>1515072540999</Id>
 			<Name><![CDATA[MilkingRobots]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515072540998</Id>
@@ -20321,6 +20358,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -20547,7 +20596,7 @@ this.boolQueue = false;
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cnc_cutting_machine_2_state_2.x3d]]></FileName>
+					<FileName><![CDATA[3d/cnc_cutting_machine_2_state_2.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_3]]></Name>
@@ -20592,8 +20641,6 @@ this.boolQueue = false;
 			<Id>1515091431760</Id>
 			<Name><![CDATA[Resource]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515091431759</Id>
@@ -20619,6 +20666,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -20707,7 +20766,7 @@ this.boolQueue = false;
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/steel_ladle_full.x3d]]></FileName>
+					<FileName><![CDATA[3d/steel_ladle_full.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA___auto_31]]></Name>
@@ -20732,8 +20791,6 @@ this.boolQueue = false;
 			<Id>1515096438679</Id>
 			<Name><![CDATA[ConcentrateContainer]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515096438678</Id>
@@ -20759,6 +20816,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -20847,7 +20916,7 @@ this.boolQueue = false;
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/steel_ladle_full.x3d]]></FileName>
+					<FileName><![CDATA[3d/steel_ladle_full.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA___auto_31]]></Name>
@@ -20872,8 +20941,6 @@ this.boolQueue = false;
 			<Id>1515098304125</Id>
 			<Name><![CDATA[ForageTroughs]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515098304124</Id>
@@ -20899,6 +20966,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -20982,8 +21061,6 @@ this.boolQueue = false;
 			<Id>1515200480432</Id>
 			<Name><![CDATA[ForageLane]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515200480431</Id>
@@ -21009,6 +21086,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -21092,8 +21181,6 @@ this.boolQueue = false;
 			<Id>1515203958794</Id>
 			<Name><![CDATA[Cubicles]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1515203958793</Id>
@@ -21119,6 +21206,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -21202,8 +21301,6 @@ this.boolQueue = false;
 			<Id>1515552502102</Id>
 			<Name><![CDATA[Dominant_cow]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<ExtendsReference>
 				<PackageName><![CDATA[model]]></PackageName>
 				<ClassName><![CDATA[Cow]]></ClassName>
@@ -21238,6 +21335,18 @@ this.boolQueue = false;
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -21353,7 +21462,7 @@ this.boolQueue = false;
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/sheep.x3d]]></FileName>
+					<FileName><![CDATA[3d/sheep.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material]]></Name>
@@ -21418,11 +21527,165 @@ this.boolQueue = false;
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
-			<Maximized>true</Maximized>
+			<EnableDeveloperPanel>false</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 		</AnimationProperties>
-		<Inputs>		
+		<Inputs>
+    		<RunConfigurationInput>
+				<Id>1531483602291</Id>
+				<Name><![CDATA[Par_MilkingRobot]]></Name>
+				<InputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[par_MilkingRobots]]></ItemName>
+				</InputReference>
+    		</RunConfigurationInput>
+    		<RunConfigurationInput>
+				<Id>1531483602292</Id>
+				<Name><![CDATA[Par_ConcFeed]]></Name>
+				<InputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[par_ConcFeed]]></ItemName>
+				</InputReference>
+    		</RunConfigurationInput>
+    		<RunConfigurationInput>
+				<Id>1531483602293</Id>
+				<Name><![CDATA[Int cows]]></Name>
+				<InputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[int_Cows]]></ItemName>
+				</InputReference>
+    		</RunConfigurationInput>		
 		</Inputs>
 		<Outputs>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Visit frequency cubicles]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[Visit_Frequency_Cubicles]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Visit frequency water troughs]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[Visit_Frequency_Water_Troughs]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Visit ratio concentrate feeder]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[Visit_Ratio_Concentrate_Feeder]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Visit ratio forage lanes]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[Visit_Ratio_Forage_Lanes]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Visit ratio milking]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[Visit_Ratio_Milking]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Hist queue lengths conc feeder]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[hist_Queue_Lengths_ConcFeeder]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Hist queue lengths milking 1]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[hist_Queue_lengths_Milking1]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Hist waiting time conc feeder]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[hist_Waiting_Time_Conc_Feeder]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Hist waiting time milking]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[hist_Waiting_Time_Milking]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Ch queue lengths]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[ch_Queue_Lengths]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Queue Length Distribution - Concentrate Feeder]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[chart1]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Waiting Times - Milking]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[chart2]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Waiting Time Dist. - Conc. Feeder]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[chart3]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Queue Length Distribution - Milking]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[model]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[chart4]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
 		</Outputs>
 	</RunConfiguration>
 	<Experiments>	
@@ -21431,8 +21694,6 @@ this.boolQueue = false;
 			<Id>1514742887249</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>1024</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
@@ -21453,7 +21714,6 @@ this.boolQueue = false;
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -21477,15 +21737,13 @@ this.boolQueue = false;
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[if ( getState() == IDLE )
 	run();
-getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
+getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
@@ -21504,36 +21762,17 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				<Parameter>
 					<ParameterName><![CDATA[par_ConcFeed]]></ParameterName>
 				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[int_Cows]]></ParameterName>
+				</Parameter>
 			</Parameters>			
-			<PresentationProperties 
-				EnableAdaptiveFrameManagement="true" 
-				EnableAntiAliasing="true"
-				EnableEnhancedModelElementsAnimation="true"
-				ToolbarCustomizableAtRuntime="true">
-				<Maximized>false</Maximized>
-				<CloseConfirmation>false</CloseConfirmation>
+			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
 				<Title><![CDATA[Model : Simulation]]></Title>	
-				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>1.0</RealTimeScale>
-				<UIProperty Name="Experiment Progress" Value="false"/>
-				<UIProperty Name="Simulation Progress" Value="true"/>
-				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Memory" Value="true"/>
-				<UIProperty Name="Statusbar Model Date" Value="true"/>
-				<UIProperty Name="Statusbar Model Step" Value="false"/>
-				<UIProperty Name="Statusbar Model Time" Value="true"/>
-				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
-				<UIProperty Name="Statusbar Status" Value="true"/>
-				<UIProperty Name="Toolbar Animation setup" Value="false"/>
-				<UIProperty Name="Toolbar Execution control" Value="true"/>
-				<UIProperty Name="Toolbar File" Value="false"/>
-				<UIProperty Name="Toolbar Model navigation" Value="true"/>
-				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
-				<UIProperty Name="Toolbar View" Value="false"/>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Never]]></StopOption>
@@ -21556,6 +21795,6 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>5</VersionBuild>
     </RequiredLibraryReference>
-	<CloudModelUuid><![CDATA[ee67af5d-7627-42c9-8eba-e0ab9265ff63]]></CloudModelUuid>
+	<CloudModelUuid><![CDATA[98a644c6-97bf-4d2d-a707-2428013166ae]]></CloudModelUuid>
 </Model>
 </AnyLogicWorkspace>

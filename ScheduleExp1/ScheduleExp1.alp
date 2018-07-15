@@ -4,13 +4,13 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.1.201806181557" AlpVersion="8.3.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
 <Model>
 	<Id>1531422085405</Id>
 	<Name><![CDATA[ScheduleExp1]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[scheduleexp1]]></JavaPackageName>
-	<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>
+	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -84,11 +84,11 @@
 					<OccurrenceDate>1531468800000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -261,7 +261,7 @@
 				<Connector>
 					<Id>1531422889809</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>620</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -287,14 +287,14 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>540</X><Y>420</Y></Point>
-						<Point><X>500</X><Y>420</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-120</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1531422892988</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>730</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -320,8 +320,8 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>620</X><Y>420</Y></Point>
-						<Point><X>580</X><Y>420</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1168,9 +1168,15 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[worker]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[forceStatisticsCollection]]></Name>
@@ -1666,7 +1672,7 @@
 				<EmbeddedObject>
 					<Id>1531422888041</Id>
 					<Name><![CDATA[release]]></Name>
-					<X>540</X><Y>400</Y>
+					<X>620</X><Y>400</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1771,7 +1777,7 @@
 				<EmbeddedObject>
 					<Id>1531422891628</Id>
 					<Name><![CDATA[sink]]></Name>
-					<X>620</X><Y>410</Y>
+					<X>730</X><Y>410</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1852,6 +1858,68 @@
 							<PackageName><![CDATA[scheduleexp1]]></PackageName>
 							<ClassName><![CDATA[Box]]></ClassName>
 							<ItemName><![CDATA[1531423041771]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>EMPTY</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1531617101195</Id>
+					<Name><![CDATA[worker]]></Name>
+					<X>510</X><Y>530</Y>
+					<Label><X>-25</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1531617103371</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[scheduleexp1]]></PackageName>
+						<ClassName><![CDATA[Worker]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[scheduleexp1]]></PackageName>
+							<ClassName><![CDATA[Worker]]></ClassName>
+							<ItemName><![CDATA[1531423098294]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -2205,6 +2273,25 @@
 					<Latitude>0.0</Latitude>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1531617103371</Id>
+					<Name><![CDATA[worker_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Shapes>
 			<Controls>
 				<Control Type="Button">
@@ -2301,11 +2388,11 @@
 					<OccurrenceDate>1531468800000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -2488,11 +2575,11 @@
 					<OccurrenceDate>1531468800000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -2512,6 +2599,81 @@
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
 			<ConnectionsId>1531423098291</ConnectionsId>
+			<StatechartElements>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1531617061338</Id>
+					<Name><![CDATA[working]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>380</X><Y>140</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
+					<Id>1531617066533</Id>
+					<Name><![CDATA[finalState]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>410</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+						<Action><![CDATA[main.remove_worker(this);]]></Action>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1531617060361</Id>
+					<Name><![CDATA[statechart]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>400</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1531617061338">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1531617069139</Id>
+					<Name><![CDATA[transition]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>410</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>42</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1531617061338" Target="1531617066533" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[triangular(5, 15, 10)]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+			</StatechartElements>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1531423098291</Id>
@@ -2534,6 +2696,21 @@
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1531617103406</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[scheduleexp1]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 
 			<Shapes>
 				<Figure3D>
@@ -2683,7 +2860,7 @@
 				<InitialDate><![CDATA[1531378500000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
 				<FinalDate><![CDATA[1534032000000]]></FinalDate>	
-				<FinalTime><![CDATA[44225.0]]></FinalTime>	
+				<FinalTime><![CDATA[2653500.0]]></FinalTime>	
 			</ModelTimeProperties>
 		</SimulationExperiment>	
 	</Experiments>
