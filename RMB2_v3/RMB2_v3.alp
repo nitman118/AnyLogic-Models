@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061754" AlpVersion="8.3.1">
 <Model>
 	<Id>1514742887196</Id>
 	<Name><![CDATA[RMB2_v3]]></Name>
@@ -101,7 +101,7 @@ import javax.inject.Inject;]]></Import>
 			<ScaleRuler>
 				<Id>1514742887198</Id>
 				<Name><![CDATA[scale]]></Name>
-				<X>240</X><Y>-30</Y>
+				<X>80</X><Y>-180</Y>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>false</PresentationFlag>
 				<ShowLabel>false</ShowLabel>
@@ -120,7 +120,7 @@ import javax.inject.Inject;]]></Import>
 				<Output>
 					<Id>1515422983749</Id>
 					<Name><![CDATA[Visit_Ratio_Milking]]></Name>
-					<X>1240</X><Y>200</Y>
+					<X>740</X><Y>960</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -140,7 +140,7 @@ import javax.inject.Inject;]]></Import>
 				<Output>
 					<Id>1515424392478</Id>
 					<Name><![CDATA[Visit_Ratio_Concentrate_Feeder]]></Name>
-					<X>1240</X><Y>240</Y>
+					<X>740</X><Y>1000</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -160,7 +160,7 @@ import javax.inject.Inject;]]></Import>
 				<Output>
 					<Id>1515424646681</Id>
 					<Name><![CDATA[Visit_Ratio_Forage_Lanes]]></Name>
-					<X>1240</X><Y>280</Y>
+					<X>740</X><Y>1040</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -180,7 +180,7 @@ import javax.inject.Inject;]]></Import>
 				<Output>
 					<Id>1515424708193</Id>
 					<Name><![CDATA[Visit_Frequency_Water_Troughs]]></Name>
-					<X>1240</X><Y>320</Y>
+					<X>740</X><Y>1080</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -200,7 +200,7 @@ import javax.inject.Inject;]]></Import>
 				<Output>
 					<Id>1515424754978</Id>
 					<Name><![CDATA[Visit_Frequency_Cubicles]]></Name>
-					<X>1240</X><Y>360</Y>
+					<X>740</X><Y>1120</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -256,7 +256,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515385739042</Id>
 					<Name><![CDATA[var_wait_Milk]]></Name>
-					<X>380</X><Y>100</Y>
+					<X>1820</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -271,7 +271,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515405764746</Id>
 					<Name><![CDATA[var_MilkAmount]]></Name>
-					<X>120</X><Y>340</Y>
+					<X>1520</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -286,7 +286,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515410818531</Id>
 					<Name><![CDATA[var_QLengthMilking]]></Name>
-					<X>1220</X><Y>640</Y>
+					<X>1820</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -301,7 +301,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515416337459</Id>
 					<Name><![CDATA[var_avgWt_Milking]]></Name>
-					<X>1380</X><Y>1020</Y>
+					<X>1820</X><Y>680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -316,7 +316,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515465202734</Id>
 					<Name><![CDATA[var_QLength_ConcFeeder]]></Name>
-					<X>1220</X><Y>580</Y>
+					<X>1819</X><Y>712</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -331,7 +331,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515465204566</Id>
 					<Name><![CDATA[var_QLength_Water]]></Name>
-					<X>100</X><Y>180</Y>
+					<X>1520</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -346,7 +346,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515465205878</Id>
 					<Name><![CDATA[var_QLength_Forage]]></Name>
-					<X>100</X><Y>200</Y>
+					<X>1520</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -361,7 +361,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515465207126</Id>
 					<Name><![CDATA[var_QLength_Cubicles]]></Name>
-					<X>100</X><Y>220</Y>
+					<X>1520</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -376,7 +376,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515469605891</Id>
 					<Name><![CDATA[var_avgWt_ConcFeed]]></Name>
-					<X>1360</X><Y>820</Y>
+					<X>1820</X><Y>620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -388,7 +388,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515469687114</Id>
 					<Name><![CDATA[var_Wait_ConcFeed]]></Name>
-					<X>1340</X><Y>740</Y>
+					<X>1820</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -400,7 +400,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515471096768</Id>
 					<Name><![CDATA[var_wait_Milk1]]></Name>
-					<X>1050</X><Y>640</Y>
+					<X>1820</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -412,8 +412,8 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515576107599</Id>
 					<Name><![CDATA[var_avg_QLength_concFeed]]></Name>
-					<X>1360</X><Y>860</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<X>1820</X><Y>640</Y>
+					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -427,7 +427,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1515576316675</Id>
 					<Name><![CDATA[var_avg_Qlength_milking]]></Name>
-					<X>1380</X><Y>1060</Y>
+					<X>1820</X><Y>740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -442,7 +442,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1516541807945</Id>
 					<Name><![CDATA[boolQueue]]></Name>
-					<X>680</X><Y>90</Y>
+					<X>1820</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -454,10 +454,25 @@ import javax.inject.Inject;]]></Import>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1531780760889</Id>
+					<Name><![CDATA[currentArea]]></Name>
+					<X>120</X><Y>-60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[ViewArea]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[va_2D]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1515287126080</Id>
 					<Name><![CDATA[par_MilkingRobots]]></Name>
-					<X>120</X><Y>260</Y>
+					<X>1460</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -482,7 +497,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1515287176856</Id>
 					<Name><![CDATA[par_ConcFeed]]></Name>
-					<X>120</X><Y>280</Y>
+					<X>1460</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -507,7 +522,7 @@ import javax.inject.Inject;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1531483458934</Id>
 					<Name><![CDATA[int_Cows]]></Name>
-					<X>780</X><Y>480</Y>
+					<X>2240</X><Y>790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -698,7 +713,7 @@ import javax.inject.Inject;]]></Import>
 				<Connector>
 					<Id>1515091613267</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>2420</X><Y>290</Y>
+					<X>2400</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -725,7 +740,7 @@ import javax.inject.Inject;]]></Import>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-80</X><Y>0</Y></Point>
+						<Point><X>-60</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -896,7 +911,7 @@ import javax.inject.Inject;]]></Import>
 				<Connector>
 					<Id>1515098627646</Id>
 					<Name><![CDATA[connector18]]></Name>
-					<X>2420</X><Y>450</Y>
+					<X>2400</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -923,7 +938,7 @@ import javax.inject.Inject;]]></Import>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1622,7 +1637,7 @@ import javax.inject.Inject;]]></Import>
 				<Connector>
 					<Id>1515254243321</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>2422</X><Y>150</Y>
+					<X>2402</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1649,8 +1664,8 @@ import javax.inject.Inject;]]></Import>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-42</X><Y>0</Y></Point>
-						<Point><X>-42</X><Y>0</Y></Point>
+						<Point><X>-22</X><Y>0</Y></Point>
+						<Point><X>-22</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -2052,11 +2067,31 @@ import javax.inject.Inject;]]></Import>
 					</Points>
 				</Connector>
 			</Connectors>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1531780760881</Id>
+					<Name><![CDATA[navigateTo]]></Name>
+					<X>120</X><Y>-80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[vArea]]></Name>
+						<Type><![CDATA[ViewArea]]></Type>
+					</Parameter>
+					<Body><![CDATA[currentArea=vArea;
+vArea.navigateTo();
+UI.setPos(vArea.getX(), vArea.getY());]]></Body>
+				</Function>
+			</Functions>
 			<CustomDistributions>
 				<CustomDistribution>
 					<Id>1515379735412</Id>
 					<Name><![CDATA[cd_SrTimeRobot]]></Name>
-					<X>80</X><Y>460</Y>
+					<X>2060</X><Y>620</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2626,7 +2661,7 @@ import javax.inject.Inject;]]></Import>
 				<CustomDistribution>
 					<Id>1515381536924</Id>
 					<Name><![CDATA[cd_SrTimeConcFeed]]></Name>
-					<X>80</X><Y>500</Y>
+					<X>2060</X><Y>660</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3974,7 +4009,7 @@ import javax.inject.Inject;]]></Import>
 				<CustomDistribution>
 					<Id>1515381769244</Id>
 					<Name><![CDATA[cd_SrTimeCubicle]]></Name>
-					<X>80</X><Y>540</Y>
+					<X>2060</X><Y>700</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6263,7 +6298,7 @@ import javax.inject.Inject;]]></Import>
 				<CustomDistribution>
 					<Id>1515381861589</Id>
 					<Name><![CDATA[cd_SrTimeForage]]></Name>
-					<X>80</X><Y>580</Y>
+					<X>2060</X><Y>740</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8263,7 +8298,7 @@ import javax.inject.Inject;]]></Import>
 				<CustomDistribution>
 					<Id>1515381967637</Id>
 					<Name><![CDATA[cd_SrTimeWater]]></Name>
-					<X>80</X><Y>620</Y>
+					<X>2060</X><Y>780</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9697,7 +9732,7 @@ import javax.inject.Inject;]]></Import>
 				<CustomDistribution>
 					<Id>1515572509155</Id>
 					<Name><![CDATA[CD_SrTimeRobot_Cleaned]]></Name>
-					<X>80</X><Y>420</Y>
+					<X>2060</X><Y>580</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10225,7 +10260,7 @@ import javax.inject.Inject;]]></Import>
     			<HistogramData>
 					<Id>1515468085894</Id>
 					<Name><![CDATA[hist_Queue_Lengths_ConcFeeder]]></Name>
-					<X>490</X><Y>1030</Y>
+					<X>1520</X><Y>720</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10256,7 +10291,7 @@ import javax.inject.Inject;]]></Import>
     			<HistogramData>
 					<Id>1515468710007</Id>
 					<Name><![CDATA[hist_Waiting_Time_Milking]]></Name>
-					<X>490</X><Y>970</Y>
+					<X>1520</X><Y>660</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10287,7 +10322,7 @@ import javax.inject.Inject;]]></Import>
     			<HistogramData>
 					<Id>1515469543629</Id>
 					<Name><![CDATA[hist_Waiting_Time_Conc_Feeder]]></Name>
-					<X>490</X><Y>930</Y>
+					<X>1520</X><Y>620</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10318,7 +10353,7 @@ import javax.inject.Inject;]]></Import>
     			<HistogramData>
 					<Id>1515531798497</Id>
 					<Name><![CDATA[hist_Queue_lengths_Milking1]]></Name>
-					<X>490</X><Y>1000</Y>
+					<X>1520</X><Y>690</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10351,7 +10386,7 @@ import javax.inject.Inject;]]></Import>
 				<AgentLink>
 					<Id>1514742887197</Id>
 					<Name><![CDATA[connections]]></Name>
-					<X>290</X><Y>70</Y>
+					<X>280</X><Y>-40</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11685,7 +11720,7 @@ agent.setColor(indianRed);
 				<EmbeddedObject>
 					<Id>1515072468817</Id>
 					<Name><![CDATA[MilkingRobots]]></Name>
-					<X>920</X><Y>170</Y>
+					<X>40</X><Y>660</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12039,7 +12074,7 @@ agent.setColor(indianRed);
 				<EmbeddedObject>
 					<Id>1515090271371</Id>
 					<Name><![CDATA[fromMilking]]></Name>
-					<X>2422</X><Y>140</Y>
+					<X>2402</X><Y>140</Y>
 					<Label><X>-35</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12659,7 +12694,7 @@ var_show = agent.var_cowLastStation;]]></Code>
 				<EmbeddedObject>
 					<Id>1515091288149</Id>
 					<Name><![CDATA[waterTroughs]]></Name>
-					<X>920</X><Y>240</Y>
+					<X>140</X><Y>660</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13445,7 +13480,7 @@ var_avg_QLength_concFeed = (double)var_QLength_ConcFeeder/fromConcFeeder.count()
 				<EmbeddedObject>
 					<Id>1515096341633</Id>
 					<Name><![CDATA[concentrate]]></Name>
-					<X>920</X><Y>301</Y>
+					<X>240</X><Y>660</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13757,7 +13792,7 @@ var_avg_QLength_concFeed = (double)var_QLength_ConcFeeder/fromConcFeeder.count()
 				<EmbeddedObject>
 					<Id>1515097090458</Id>
 					<Name><![CDATA[fromWater]]></Name>
-					<X>2420</X><Y>280</Y>
+					<X>2400</X><Y>280</Y>
 					<Label><X>-30</X><Y>40</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14213,8 +14248,8 @@ var_show = agent.var_cowLastStation;]]></Code>
 				<EmbeddedObject>
 					<Id>1515098693498</Id>
 					<Name><![CDATA[fromForage]]></Name>
-					<X>2420</X><Y>440</Y>
-					<Label><X>-15</X><Y>35</Y></Label>
+					<X>2400</X><Y>440</Y>
+					<Label><X>-40</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -15847,7 +15882,7 @@ var_show = agent.var_cowLastStation;]]></Code>
 				<EmbeddedObject>
 					<Id>1515200405990</Id>
 					<Name><![CDATA[forageLane]]></Name>
-					<X>920</X><Y>360</Y>
+					<X>370</X><Y>660</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16370,7 +16405,7 @@ var_show = agent.var_cowLastStation;
 				<EmbeddedObject>
 					<Id>1515203897203</Id>
 					<Name><![CDATA[Cubicles]]></Name>
-					<X>920</X><Y>420</Y>
+					<X>460</X><Y>660</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -17486,6 +17521,78 @@ selective gate checks the text on the button and uses that to change booleans to
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
 					<InitializationType>EMPTY</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1531780870735</Id>
+					<Name><![CDATA[pMLSettings]]></Name>
+					<X>-260</X><Y>900</Y>
+					<Label><X>-40</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[PMLSettings]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[PMLSettings]]></ClassName>
+							<ItemName><![CDATA[1412336243168]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[offsetForAttachedUnits]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[animationLocationInitialCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[10]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[enableStatsByDefault]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<TableReference>
 						</TableReference>
@@ -18780,7 +18887,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515389247849</Id>
 					<Name><![CDATA[text]]></Name>
-					<X>1000</X><Y>190</Y>
+					<X>30</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18802,7 +18909,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515389247851</Id>
 					<Name><![CDATA[text1]]></Name>
-					<X>1190</X><Y>190</Y>
+					<X>220</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18824,7 +18931,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515389247852</Id>
 					<Name><![CDATA[text2]]></Name>
-					<X>1090</X><Y>190</Y>
+					<X>120</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18846,7 +18953,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515408760607</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>1010</X><Y>140</Y>
+					<X>40</X><Y>140</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18867,7 +18974,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515408916654</Id>
 					<Name><![CDATA[text4]]></Name>
-					<X>1000</X><Y>267</Y>
+					<X>30</X><Y>267</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18889,7 +18996,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515408916657</Id>
 					<Name><![CDATA[text5]]></Name>
-					<X>1190</X><Y>267</Y>
+					<X>220</X><Y>267</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18911,7 +19018,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515408916659</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>1095</X><Y>267</Y>
+					<X>125</X><Y>267</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18933,7 +19040,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515408976485</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>1000</X><Y>216</Y>
+					<X>30</X><Y>216</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18954,7 +19061,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409080093</Id>
 					<Name><![CDATA[text8]]></Name>
-					<X>1000</X><Y>285</Y>
+					<X>30</X><Y>285</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18975,7 +19082,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409163078</Id>
 					<Name><![CDATA[text9]]></Name>
-					<X>1000</X><Y>335</Y>
+					<X>30</X><Y>335</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18997,7 +19104,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409163081</Id>
 					<Name><![CDATA[text10]]></Name>
-					<X>1190</X><Y>335</Y>
+					<X>220</X><Y>335</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19019,7 +19126,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409163084</Id>
 					<Name><![CDATA[text11]]></Name>
-					<X>1095</X><Y>335</Y>
+					<X>125</X><Y>335</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19041,7 +19148,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409190403</Id>
 					<Name><![CDATA[text12]]></Name>
-					<X>1000</X><Y>390</Y>
+					<X>30</X><Y>390</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19063,7 +19170,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409190405</Id>
 					<Name><![CDATA[text13]]></Name>
-					<X>1190</X><Y>390</Y>
+					<X>220</X><Y>390</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19085,7 +19192,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409190407</Id>
 					<Name><![CDATA[text14]]></Name>
-					<X>1095</X><Y>390</Y>
+					<X>125</X><Y>390</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19107,7 +19214,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409215045</Id>
 					<Name><![CDATA[text15]]></Name>
-					<X>1000</X><Y>450</Y>
+					<X>30</X><Y>450</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19129,7 +19236,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409215047</Id>
 					<Name><![CDATA[text16]]></Name>
-					<X>1190</X><Y>450</Y>
+					<X>220</X><Y>450</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19151,7 +19258,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409215049</Id>
 					<Name><![CDATA[text17]]></Name>
-					<X>1095</X><Y>450</Y>
+					<X>125</X><Y>450</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19173,7 +19280,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409457194</Id>
 					<Name><![CDATA[text18]]></Name>
-					<X>1000</X><Y>344</Y>
+					<X>30</X><Y>344</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19194,7 +19301,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515409461499</Id>
 					<Name><![CDATA[text19]]></Name>
-					<X>1000</X><Y>403</Y>
+					<X>30</X><Y>403</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19311,7 +19418,7 @@ selective gate checks the text on the button and uses that to change booleans to
 				<Text>
 					<Id>1515425731338</Id>
 					<Name><![CDATA[text20]]></Name>
-					<X>1240</X><Y>160</Y>
+					<X>740</X><Y>920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19376,14 +19483,406 @@ selective gate checks the text on the button and uses that to change booleans to
 					<AngleX>45.0</AngleX>
 					<AngleZ>45.0</AngleZ>
 				</Light3D>
+				<Group>
+					<Id>1531780293332</Id>
+					<Name><![CDATA[UI]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Shapes>
+				<RoundedRectangle>
+					<Id>1531780293334</Id>
+					<Name><![CDATA[roundRectangle]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1000</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-14774017</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1531780293336</Id>
+					<Name><![CDATA[roundRectangle1]]></Name>
+					<X>620</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[navigateTo(va_2D);]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>80</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillColorCode><![CDATA[currentArea==va_2D?orange:dodgerBlue]]></FillColorCode>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1531780293338</Id>
+					<Name><![CDATA[roundRectangle2]]></Name>
+					<X>720</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[navigateTo(va_3D);]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>80</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillColorCode><![CDATA[currentArea==va_3D?orange:dodgerBlue]]></FillColorCode>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1531780293340</Id>
+					<Name><![CDATA[roundRectangle3]]></Name>
+					<X>820</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[navigateTo(va_Stat);]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>80</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillColorCode><![CDATA[currentArea==va_Stat?orange:dodgerBlue]]></FillColorCode>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1531780293342</Id>
+					<Name><![CDATA[roundRectangle4]]></Name>
+					<X>920</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[navigateTo(va_Logic);]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>80</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillColorCode><![CDATA[currentArea==va_Logic?orange:dodgerBlue]]></FillColorCode>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1531780293344</Id>
+					<Name><![CDATA[roundRectangle5]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>300</Width>
+					<Height>60</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-6632142</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<Text>
+					<Id>1531780293346</Id>
+					<Name><![CDATA[text21]]></Name>
+					<X>40</X><Y>2</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Modeling and Analysis of
+Manufacturing Systems ]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>20</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1531780293348</Id>
+					<Name><![CDATA[text22]]></Name>
+					<X>750</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[3D]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1531780293350</Id>
+					<Name><![CDATA[text23]]></Name>
+					<X>650</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[2D]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1531780293352</Id>
+					<Name><![CDATA[text24]]></Name>
+					<X>940</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Logic]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1531780293354</Id>
+					<Name><![CDATA[text25]]></Name>
+					<X>826</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[Statistics]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+
+				</Group>
+				<Group>
+					<Id>1531781090864</Id>
+					<Name><![CDATA[gr_info]]></Name>
+					<X>500</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[if(node3.isVisible()&&text27.isVisible()){
+node3.setVisible(false);
+text27.setVisible(false);
+}else{
+node3.setVisible(true);
+text27.setVisible(true);
+
+}]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Shapes>
+				<Oval>
+					<Id>1531781014576</Id>
+					<Name><![CDATA[oval]]></Name>
+					<X>-6.25</X><Y>-6.25</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>13.75</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-10496</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
+				<Text>
+					<Id>1531781042287</Id>
+					<Name><![CDATA[text26]]></Name>
+					<X>-9</X><Y>-18</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-65536</Color>
+					<Text><![CDATA[i]]></Text>
+					<Font>
+						<Name>Comic Sans MS</Name>
+						<Size>16</Size>
+						<Style>3</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+
+				</Group>
+				<PolygonNode>
+					<Id>1531781378745</Id>
+					<Name><![CDATA[node3]]></Name>
+					<X>415</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-10496</LineColor>
+					<FillColor>-10496</FillColor>
+					<LineWidth>1</LineWidth>
+					<LineMaterial>null</LineMaterial>
+					<FillMaterial>null</FillMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<AttractorsLayout>random</AttractorsLayout>
+
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>35</X><Y>0</Y></Point>
+						<Point><X>65</X><Y>-30</Y></Point>
+						<Point><X>50</X><Y>0</Y></Point>
+						<Point><X>115</X><Y>0</Y></Point>
+						<Point><X>115</X><Y>65</Y></Point>
+						<Point><X>5</X><Y>65</Y></Point>
+						<Point><X>-30</X><Y>90</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+				</PolygonNode>
+				<Text>
+					<Id>1531781491158</Id>
+					<Name><![CDATA[text27]]></Name>
+					<X>418</X><Y>145</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Selective gate ensures 
+that a recently milked cow 
+is not allowed inside the 
+milking station thus 
+preserving its capacity]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>9</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Controls>
 				<Control Type="Window3D">
 					<Id>1515068656503</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>230</X><Y>520</Y>
-					<Width>530</Width>
-					<Height>310</Height>
+					<X>0</X><Y>1300</Y>
+					<Width>1000</Width>
+					<Height>560</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ShowLabel>false</ShowLabel>
@@ -19396,12 +19895,12 @@ selective gate checks the text on the button and uses that to change booleans to
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515298687284</Id>
 					<Name><![CDATA[button]]></Name>
-					<X>490</X><Y>470</Y>
+					<X>320</X><Y>80</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="200" Height="30">
+					<BasicProperties Width="150" Height="30">
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
@@ -19438,8 +19937,8 @@ Cubicles.resetStats();
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515328894355</Id>
 					<Name><![CDATA[Add_Cows]]></Name>
-					<X>850</X><Y>460</Y>
-					<Label><X>0</X><Y>40</Y></Label>
+					<X>670</X><Y>80</Y>
+					<Label><X>-5</X><Y>-5</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -19459,7 +19958,7 @@ Cubicles.resetStats();
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515389121806</Id>
 					<Name><![CDATA[Milking_Robots]]></Name>
-					<X>1000</X><Y>160</Y>
+					<X>30</X><Y>160</Y>
 					<Label><X>110</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19481,7 +19980,7 @@ Cubicles.resetStats();
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515389197645</Id>
 					<Name><![CDATA[ResetStats]]></Name>
-					<X>1010</X><Y>90</Y>
+					<X>40</X><Y>90</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19508,7 +20007,7 @@ var_MilkAmount = 0;
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515408877255</Id>
 					<Name><![CDATA[tx_Water_troughs]]></Name>
-					<X>1000</X><Y>236</Y>
+					<X>30</X><Y>236</Y>
 					<Label><X>110</X><Y>-6</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19530,7 +20029,7 @@ var_MilkAmount = 0;
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515409032980</Id>
 					<Name><![CDATA[tx_Concentrates]]></Name>
-					<X>1000</X><Y>301</Y>
+					<X>30</X><Y>301</Y>
 					<Label><X>120</X><Y>-11</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19552,7 +20051,7 @@ var_MilkAmount = 0;
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515409172747</Id>
 					<Name><![CDATA[tx_forage]]></Name>
-					<X>1000</X><Y>360</Y>
+					<X>30</X><Y>360</Y>
 					<Label><X>120</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19574,7 +20073,7 @@ var_MilkAmount = 0;
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515409197956</Id>
 					<Name><![CDATA[tx_Cubicles]]></Name>
-					<X>1000</X><Y>420</Y>
+					<X>30</X><Y>420</Y>
 					<Label><X>130</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19596,12 +20095,12 @@ var_MilkAmount = 0;
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1515419686662</Id>
 					<Name><![CDATA[button1]]></Name>
-					<X>900</X><Y>460</Y>
+					<X>730</X><Y>80</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="70" Height="30">
+					<BasicProperties Width="180" Height="30">
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
@@ -19618,7 +20117,7 @@ cowsEnter.inject(int_Cows);
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
-						<LabelText><![CDATA[Run]]></LabelText>
+						<LabelText><![CDATA[Add Cows in The Barn]]></LabelText>
 					</ExtendedProperties>
 				</Control>
 				<Control Type="Button">
@@ -19657,7 +20156,7 @@ this.boolQueue = false;
     			<TimePlot>
 					<Id>1515304923946</Id>
 					<Name><![CDATA[ch_Queue_Lengths]]></Name>
-					<X>780</X><Y>520</Y>
+					<X>0</X><Y>680</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19722,7 +20221,7 @@ this.boolQueue = false;
     			<Histogram>
 					<Id>1515468176533</Id>
 					<Name><![CDATA[chart1]]></Name>
-					<X>1010</X><Y>930</Y>
+					<X>40</X><Y>920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19784,7 +20283,7 @@ this.boolQueue = false;
     			<Histogram>
 					<Id>1515468948027</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>750</X><Y>720</Y>
+					<X>320</X><Y>700</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19846,7 +20345,7 @@ this.boolQueue = false;
     			<Histogram>
 					<Id>1515470583107</Id>
 					<Name><![CDATA[chart3]]></Name>
-					<X>1010</X><Y>730</Y>
+					<X>400</X><Y>920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19908,7 +20407,7 @@ this.boolQueue = false;
     			<Histogram>
 					<Id>1515531798490</Id>
 					<Name><![CDATA[chart4]]></Name>
-					<X>700</X><Y>920</Y>
+					<X>600</X><Y>700</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -19971,15 +20470,51 @@ this.boolQueue = false;
 			<Areas>
 				<Area>
 					<Id>1515289659119</Id>
-					<Name><![CDATA[MyLogic]]></Name>
-					<X>1440</X><Y>20</Y>
+					<Name><![CDATA[va_Logic]]></Name>
+					<X>1440</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Title><![CDATA[MyLogic]]></Title>
-					<Width>1040</Width>
-					<Height>500</Height>
+					<Width>1000</Width>
+					<Height>840</Height>
+				</Area>
+				<Area>
+					<Id>1531775608317</Id>
+					<Name><![CDATA[va_2D]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>520</Height>
+				</Area>
+				<Area>
+					<Id>1531775635214</Id>
+					<Name><![CDATA[va_3D]]></Name>
+					<X>0</X><Y>1200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>660</Height>
+				</Area>
+				<Area>
+					<Id>1531780622232</Id>
+					<Name><![CDATA[va_Stat]]></Name>
+					<X>0</X><Y>540</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>620</Height>
 				</Area>
 			</Areas>
 
@@ -21500,7 +22035,7 @@ this.boolQueue = false;
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
 		<Width>1000</Width>
-		<Height>1160</Height>
+		<Height>520</Height>
 	</Frame>
 	<Database>
 		<Logging>false</Logging>
@@ -21526,7 +22061,7 @@ this.boolQueue = false;
 			<StopNever>false</StopNever>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
-			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<EnableZoomAndPanning>false</EnableZoomAndPanning>
 			<EnableDeveloperPanel>false</EnableDeveloperPanel>
 			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 		</AnimationProperties>
@@ -21562,7 +22097,7 @@ this.boolQueue = false;
 		<Outputs>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Visit frequency cubicles]]></Name>
+				<Name><![CDATA[Visit frequency of cubicles]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21571,7 +22106,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Visit frequency water troughs]]></Name>
+				<Name><![CDATA[Visit frequency of water troughs]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21580,7 +22115,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Visit ratio concentrate feeder]]></Name>
+				<Name><![CDATA[Visit ratio of concentrate feeder]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21589,7 +22124,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Visit ratio forage lanes]]></Name>
+				<Name><![CDATA[Visit ratio of forage lanes]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21598,7 +22133,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Visit ratio milking]]></Name>
+				<Name><![CDATA[Visit ratio of milking]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21607,7 +22142,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Hist queue lengths conc feeder]]></Name>
+				<Name><![CDATA[Queue lengths at conc feeder]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21616,7 +22151,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Hist queue lengths milking 1]]></Name>
+				<Name><![CDATA[Queue lengths at milking station]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21625,7 +22160,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Hist waiting time conc feeder]]></Name>
+				<Name><![CDATA[Waiting times at concentrate feeder]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21634,7 +22169,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Hist waiting time milking]]></Name>
+				<Name><![CDATA[Waiting time at milking station]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21643,7 +22178,7 @@ this.boolQueue = false;
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Ch queue lengths]]></Name>
+				<Name><![CDATA[Queue Lengths]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[model]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -21767,7 +22302,7 @@ getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
-				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<EnableZoomAndPanning>false</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
 				<Title><![CDATA[Model : Simulation]]></Title>	
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>

@@ -1,0 +1,6 @@
+1. Unpack Jython installer jar
+2. Put model.alp and script.py in the Jython folder
+3. Open and launch the model from AnyLogic
+
+Last test under Java 9 and AnyLogic 8.2.4.
+2018, July, 7

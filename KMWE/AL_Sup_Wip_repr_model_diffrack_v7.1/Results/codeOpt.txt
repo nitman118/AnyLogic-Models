@@ -1,0 +1,9 @@
+outputs.println("Iteration,CollectionTable,Assembly,Terminal,CollectionTableOut,Disassembly,ObjectiveValue");
+
+outputs.println(getCurrentIteration()+","
++getCurrentParamValue(_oqvar_node_colTable_in)+","
++getCurrentParamValue(_oqvar_node_Assembly)+","
+//+getCurrentParamValue(_oqvar_node_Terminal)+","
++getCurrentParamValue(_oqvar_node_colTable_out)+","
+//+getCurrentParamValue(_oqvar_node_Disassembly)+","
++getCurrentObjectiveValue());

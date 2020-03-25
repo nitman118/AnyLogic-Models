@@ -1,0 +1,4 @@
+Order Processing Waiting,0.0,Order Processing Q Length,0.0
+Assembly Waiting,2.164275023584778,Assembly Q Length,0.028
+Tool Inspection Waiting,167.5387136554857,Tool Inspection Q Length,2.7854385975168885,Tool Inspection utilization:0.9992128978276998
+Collection Waiting,0.0,Collection Q Length,0.0

@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061754" AlpVersion="8.3.1">
 <Model>
 	<Id>1531052972351</Id>
 	<Name><![CDATA[AdvancedSimA4]]></Name>
@@ -321,7 +321,7 @@ return this.spot;
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[54]]></Code>
+							<Code><![CDATA[65]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1531314170249</Id>
@@ -10439,14 +10439,14 @@ false]]></Code>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>310</Width>
-					<Height>250</Height>
+					<Height>470</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
 						<Width>230</Width>
-						<Height>140</Height>
+						<Height>380</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -10497,7 +10497,7 @@ false]]></Code>
     			<TimePlot>
 					<Id>1531314089395</Id>
 					<Name><![CDATA[plot1]]></Name>
-					<X>710</X><Y>2430</Y>
+					<X>520</X><Y>3030</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10515,7 +10515,7 @@ false]]></Code>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>260</Width>
-					<Height>250</Height>
+					<Height>200</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
@@ -10528,7 +10528,7 @@ false]]></Code>
 						<GridColor>-12566464</GridColor>
 					</ChartArea>
 					<Legend>
-						<Place>SOUTH</Place>
+						<Place>EAST</Place>
 						<TextColor>-16777216</TextColor>
 						<Size>50</Size>
 					</Legend>
@@ -10537,7 +10537,7 @@ false]]></Code>
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<ShowLegend>true</ShowLegend>
+					<ShowLegend>false</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
@@ -10648,6 +10648,71 @@ false]]></Code>
 						<Title><![CDATA[Cycle Time]]></Title>							
 					</HistogramDataExpression>
     			</Histogram>
+    			<TimePlot>
+					<Id>1531748715349</Id>
+					<Name><![CDATA[plot2]]></Name>
+					<X>620</X><Y>2430</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1531382400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>380</Width>
+					<Height>460</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>300</Width>
+						<Height>400</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>EAST</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>50</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>false</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1000]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Profit]]></Title>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-16744448</Color>
+					<Expression2><![CDATA[profit1()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>50000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[50000]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
 			</Charts>
 			<Areas>
 				<Area>
@@ -11674,7 +11739,7 @@ false]]></Code>
 				<Variable Class="PlainVariable">
 					<Id>1531264767682</Id>
 					<Name><![CDATA[cs]]></Name>
-					<X>-50</X><Y>40</Y>
+					<X>-70</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11738,6 +11803,43 @@ false]]></Code>
 
 
 			<Shapes>
+				<Text>
+					<Id>1531116221898</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>-10</X><Y>-30</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<TextCode><![CDATA[getIndex()]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Group>
+					<Id>1531748518620</Id>
+					<Name><![CDATA[group]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<OnClickCode><![CDATA[viewArea.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Shapes>
 				<Figure3D>
 					<Id>1531054502043</Id>
 					<Name><![CDATA[car]]></Name>
@@ -11774,29 +11876,24 @@ false]]></Code>
 					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
-				<Text>
-					<Id>1531116221898</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>-10</X><Y>-30</Y>
+			</Shapes>
+
+				</Group>
+			</Shapes>
+			<Areas>
+				<Area>
+					<Id>1531748524294</Id>
+					<Name><![CDATA[viewArea]]></Name>
+					<X>-180</X><Y>-30</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[text]]></Text>
-					<TextCode><![CDATA[getIndex()]]></TextCode>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>10</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-			</Shapes>
+					<Title><![CDATA[]]></Title>
+					<Width>330</Width>
+					<Height>150</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -12138,7 +12235,7 @@ false]]></Code>
 			<FinalTime><![CDATA[44640.0]]></FinalTime>	
 		</ModelTimeProperties>
 		<AnimationProperties>
-			<StopNever>true</StopNever>
+			<StopNever>false</StopNever>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
 			<EnableZoomAndPanning>false</EnableZoomAndPanning>
@@ -12148,7 +12245,7 @@ false]]></Code>
 		<Inputs>
     		<RunConfigurationInput>
 				<Id>1531596754104</Id>
-				<Name><![CDATA[P nr assistants]]></Name>
+				<Name><![CDATA[Number of Assistants]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12157,7 +12254,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531596755897</Id>
-				<Name><![CDATA[P nr cleaners]]></Name>
+				<Name><![CDATA[Number of Cleaners]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12166,7 +12263,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531188272794</Id>
-				<Name><![CDATA[P nr cash registers]]></Name>
+				<Name><![CDATA[Number of Reserved Parking]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12175,7 +12272,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531188274020</Id>
-				<Name><![CDATA[P nr clean spots]]></Name>
+				<Name><![CDATA[Number of Cleaning Spots]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12184,7 +12281,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531188276131</Id>
-				<Name><![CDATA[P parking spaces]]></Name>
+				<Name><![CDATA[Number of Normal Parking Spots]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12193,7 +12290,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531580898829</Id>
-				<Name><![CDATA[P hourly wage assistant]]></Name>
+				<Name><![CDATA[Hourly Wage of Assistant]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12202,7 +12299,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531580898830</Id>
-				<Name><![CDATA[P hourly wage cleaner]]></Name>
+				<Name><![CDATA[Hourly Wage of Cleaner]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12210,8 +12307,8 @@ false]]></Code>
 				</InputReference>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
-				<Id>1531596724978</Id>
-				<Name><![CDATA[P revenue per car]]></Name>
+				<Id>1531749039711</Id>
+				<Name><![CDATA[Revenue Per Car]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12220,7 +12317,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531602679851</Id>
-				<Name><![CDATA[P cust arrival rate]]></Name>
+				<Name><![CDATA[Customer Arrival Rate  (Poisson)]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12229,7 +12326,7 @@ false]]></Code>
     		</RunConfigurationInput>
     		<RunConfigurationInput>
 				<Id>1531602684398</Id>
-				<Name><![CDATA[P hourly cleaning cost]]></Name>
+				<Name><![CDATA[Hourly cost of Cleaning]]></Name>
 				<InputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12240,7 +12337,7 @@ false]]></Code>
 		<Outputs>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Cars to Competitors]]></Name>
+				<Name><![CDATA[Cars processed vs Lost to Competitor]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
@@ -12276,20 +12373,20 @@ false]]></Code>
     		</RunConfigurationOutput>
     		<RunConfigurationOutput>
 				<Id>0</Id>
-				<Name><![CDATA[Margins]]></Name>
-				<OutputReference>
-					<PackageName><![CDATA[advancedsima4]]></PackageName>
-					<ClassName><![CDATA[Main]]></ClassName>
-					<ItemName><![CDATA[plot1]]></ItemName>
-				</OutputReference>
-    		</RunConfigurationOutput>
-    		<RunConfigurationOutput>
-				<Id>0</Id>
 				<Name><![CDATA[Cycle Time Distribution]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[advancedsima4]]></PackageName>
 					<ClassName><![CDATA[Main]]></ClassName>
 					<ItemName><![CDATA[chart2]]></ItemName>
+				</OutputReference>
+    		</RunConfigurationOutput>
+    		<RunConfigurationOutput>
+				<Id>0</Id>
+				<Name><![CDATA[Profit]]></Name>
+				<OutputReference>
+					<PackageName><![CDATA[advancedsima4]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[plot2]]></ItemName>
 				</OutputReference>
     		</RunConfigurationOutput>
 		</Outputs>

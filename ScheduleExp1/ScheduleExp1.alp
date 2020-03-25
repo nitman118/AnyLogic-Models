@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061754" AlpVersion="8.3.1">
 <Model>
 	<Id>1531422085405</Id>
 	<Name><![CDATA[ScheduleExp1]]></Name>
@@ -17,7 +17,7 @@
 			<Id>1531422085410</Id>
 			<Name><![CDATA[Main]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[resourcePool.set_capacityScheduleOnOff(schedule);]]></StartupCode>
+			<StartupCode><![CDATA[//resourcePool.set_capacityScheduleOnOff(schedule);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1531422085409</Id>
@@ -120,7 +120,7 @@
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[Schedule]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[schedule]]></Code>
+							<Code><![CDATA[scheduleWeekly]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -382,6 +382,31 @@
 						<Interval>
 							<Start>370800000</Start>
 							<End>374400000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>32400000</Start>
+							<End>36000000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>118800000</Start>
+							<End>122400000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>205200000</Start>
+							<End>208800000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>291600000</Start>
+							<End>295200000</End>
+							<Value>true</Value>
+						</Interval>
+						<Interval>
+							<Start>378000000</Start>
+							<End>381600000</End>
 							<Value>true</Value>
 						</Interval>
 					</Intervals>
@@ -803,9 +828,15 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[taskPreemptionPolicy]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.PP_WAIT_FOR_ORIGINAL_RESOURCE]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[terminatedTaskProcessing]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.TERMINATED_DO_NOTHING]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[terminatedTasksEnter]]></Name>
@@ -1084,15 +1115,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[endOfShiftTaskPreemptionPolicy]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.PP_TERMINATE]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[endOfShiftTaskMayPreemptOtherTasks]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[false]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[enableBreaks]]></Name>
@@ -2307,7 +2332,7 @@
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[sched=scheduleWeekly]]></ActionCode>
+						<ActionCode><![CDATA[sched=schedule]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
