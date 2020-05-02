@@ -1,0 +1,59 @@
+Simulation of a new Assembly Department 
+
+The finished product is a Train Frame, every time we have 6 of these ready, a Truck will be called to to pick
+up the finished products and ship them.
+
+The model is based on two levels(floor 0 and floor 1), our focus will be mainly on floor 1: 
+
+Floor 0 in which we have 3 different processing areas: Cutting, Stamping and Folding
+In each of these processing areas we have different batches of components that will serve to assemble/create the finished product. 
+In the excel spreadsheet you can see the following information:
+- Processing_location: the source from which the batch of each component is ready to be delivered;
+- Batch_id: the unique id of each batch of components; (this one will be generated after the 1st batch is finished)
+- Component_id: unique id of each component;
+- Batch_size: the nr. of components in the batches;
+- PF_components: the nr. of components of that category needed in the assembly of the FP;
+- Needs_Welding: if the batch needs to be weld in floor 1 before it gets stored.
+Each processing area has its own forklift that moves the batches to the specific elevator.
+
+The different floors are linked through 2 elevetors: 
+
+All the batches from cutting use Elevator 1;
+All the batches from Stamping and Folding use Elevator 2;
+These elevators has a specific capacity wich is of maximum 5 batches/pallets and can cotain only batches, not forklifts.
+
+Floor 1 is organized as follows:
+
+There are 2 forklifts that helps in the movement of batches.
+
+After the batches arrive, either they need to be weld or not(Needs_Welding in the spreadsheet). 
+If yes the batches go to the welding area where they will be weld and then they move to be stored in the WIP Inventory;
+If no the batches go directly to the WIP Inventory.
+
+Production Area:
+
+As stated in the spreadsheet (PF_components) each Finished Product will need a specific amount of that component that will serve to assemble it.
+
+The production area is organized as follow, following this flow:
+- 2 Assembly Stations (with 2 workers each)
+- 1 Sealing Station (with 1 worker)
+- 1 Test Station;
+- 1 Test Station in Water;
+
+The finished product is assembled in either one of the 2 assembly station, it gets sealed, tested normally and finally tested in water.
+The movement of the finished product from one station to another is done by a crane.
+It moves it from the assembly station to the sealing, to the test and finally to the test station in water.
+
+Once the Testing in Water is done the Crane moves the Finished Product and store it in a rack. The FP storage area is close to the production area. 
+Every 6 Finished Products a Truck is called and the racks are moved with forklifts to the truck.
+
+
+
+
+
+
+
+
+
+
+
