@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241844" AlpVersion="8.5.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241931" AlpVersion="8.5.1">
 <Model>
 	<Id>1552591995964</Id>
 	<Name><![CDATA[layoutSetup_baseCase3]]></Name>
@@ -880,11 +880,11 @@ stateToText.put("DELIVERED", "transport order delivered");
 //AGV setup
 if(p_agvFleetType==0 ){
 traceLN("homogeneous fleet setting up....");
-setupAGVs("Inputs\\AGV\\agvsHomo.xlsx", p_agvFleetSize);
+setupAGVs("Inputs/AGV/agvsHomo.xlsx", p_agvFleetSize);
 }
 else{
 traceLN("heterogeneous fleet setting up....");
-setupAGVs("Inputs\\AGV\\agvs.xlsx",p_agvFleetSize);
+setupAGVs("Inputs/AGV/agvs.xlsx",p_agvFleetSize);
 }
 //variable initialization
 numAGVs=aGVs.size();
@@ -1580,7 +1580,7 @@ for (int n = 2; n <= numAGVs; n++) {
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[return "Inputs\\TRs\\"+xl_demandFile.getCellStringValue(1, p_demandFile+2, 2)+".xlsx";]]></Body>
+					<Body><![CDATA[return "Inputs/TRs/"+xl_demandFile.getCellStringValue(1, p_demandFile+2, 2)+".xlsx";]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
